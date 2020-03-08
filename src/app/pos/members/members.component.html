@@ -1,0 +1,40 @@
+<p>  members works! </p>
+
+<div class="basic-container">
+    <mat-card>
+        <!-- Page form start -->
+        <form [formGroup]="exampleForm">
+            <mat-card-title>Reactive form - Sept/30/2019</mat-card-title>
+            <mat-card-content>
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%" fxLayoutAlign="left" layout-margin>
+                    <mat-form-field>
+                        <mat-label>Select a country</mat-label>
+                        <mat-select value="" (selectionChange)="countryChange($event)" formControlName="country">
+                            <mat-option value="">Please select a country</mat-option>
+                            <mat-option *ngFor="let contry of countries" [value]="contry.id">{{contry.name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+
+            <!--  <pre>{{exampleForm.value | json}}</pre> -->
+            
+        </form>
+    </mat-card>
+</div>
+
+
+
+<!--
+<app-members-search></app-members-search>
+<app-members-list></app-members-list>
+-->
+<!-- <app-members-search (searchFilters)="filters1 = $event"></app-members-search> -->
+
+<app-members-search (groupFilters)="filters1 = $event"></app-members-search>
+
+
+<!-- <app-members-search (groupFilters)="memberSearchEventHandler($event)"></app-members-search> -->
+
+<app-members-list [groupFilters]="filters1"
+                  [searchByKeywordTest]="searchTextTest"></app-members-list>

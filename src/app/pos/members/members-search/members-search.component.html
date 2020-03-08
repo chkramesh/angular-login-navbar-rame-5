@@ -1,0 +1,36 @@
+<p>  members-search works! </p>
+
+<section class="searchSection mat-elevation-z8">
+
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+
+        <button class='button' mat-raised-button (click)="getAllRecords()">
+            Get all members
+        </button>
+
+        <button mat-raised-button (click)="getAllSelected()">Show Selected</button>
+
+        <button mat-raised-button (click)="addRecord()">Add</button>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+
+        <mat-form-field>
+            <mat-select placeholder="Search by country" [formControl]="countriesControl">
+                <mat-option *ngFor="let country of countries"
+                            [value]="country"
+                            (click)="searchCountries(country)">
+                    {{country}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+        <!-- Last name query. -->
+        <mat-form-field id="searchField">
+            <input matInput (keyup)="searchTerm$.next($event.target.value)" placeholder="Search by last name">
+            <mat-hint align="center">Enter at least first 3 letters.</mat-hint>
+        </mat-form-field>
+    </div>
+
+</section> <!-- End search section -->

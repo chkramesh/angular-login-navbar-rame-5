@@ -1,0 +1,78 @@
+<p>    pos works!</p>
+
+<!--
+<app-items></app-items>
+<app-personal-details></app-personal-details>
+-->
+
+
+
+<!-- Page content -->
+<div class="basic-container">
+    <mat-card class="cardPadding">
+
+        <mat-card-title> Card 1 </mat-card-title>
+        <mat-card-content>
+
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%" fxLayoutAlign="left" layout-margin>
+                <app-items></app-items>
+                <app-parent></app-parent>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="cardPadding">
+
+        <mat-card-title> Card 2 </mat-card-title>
+        <mat-card-content>
+
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%" fxLayoutAlign="left" layout-margin>
+                <app-sibling></app-sibling>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+
+
+    <mat-card class="cardPadding">
+        <mat-card-title>Card 3 </mat-card-title>
+        <mat-card-content>
+            <div class="container"
+                 fxLayout
+                 fxLayout.xs="column"
+                 fxLayoutAlign="center"
+                 fxLayoutGap="10px"
+                 fxLayoutGap.xs="0">
+                <div class="item item-1" fxFlex="15%">Item 1</div>
+                <div class="item item-2" fxFlex="20%" fxFlexOrder="3">Item 2</div>
+                <div class="item item-3" fxFlex>Item 3</div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+</div>
+
+<!--
+
+
+<fieldset>
+    <legend>Personalia:</legend>
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <app-items fxFlex="50%"></app-items>
+        <app-personal-details fxFlex="50%"></app-personal-details>
+    </div>
+</fieldset>
+
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+    <div class="item item-1" fxFlex="15%">Item 1</div>
+    <div class="item item-2" fxFlex="20%" fxFlexOrder="3">Item 2</div>
+    <div class="item item-3" fxFlex>Item 3</div>
+</div>
+
+     -->
