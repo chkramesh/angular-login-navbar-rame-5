@@ -1,0 +1,561 @@
+C:\development\Java_WS_Jan2020\SpringBootJwtAuthentication_WS
+
+----------------------
+
+
+Code 
+C:\Development\workspace_practice\ang-spring-boot-jwt
+
+Create new workspace
+C:\Development\workspace_practice\workspace_java
+
+---------------------------
+Run --> Run As - Maven Build
+
+1. Select your project
+clean install spring-boot:run
+
+spring-boot:run
+
+{
+	"username":"javainuse",
+	"password":"password"
+	
+}
+
+localhost:8080/authenticate
+
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE1NzMzMTcwODcsImlhdCI6MTU3MzI5OTA4N30.dj4sjEDDzBMiWdTCjG0-tfkjFvaS--uDWTy-5KWHJe_HjFz8WbcdJhtwzGRCDmqgFX8aAKqMSTZm0PLYWeHGcQ
+
+http://localhost:8080/employees
+
+----------------
+
+http://localhost:8080/api/auth/signup
+
+{
+	"name":"Adam",
+	"username":"adam",
+	"email":"adam@test.com",
+	"role": [
+		"user",
+		"pm"
+    ],
+    "password":"123456789"
+
+}
+-----
+
+{
+	"name":"Jack",
+	"username":"jack",
+	"email":"jack@test.com",
+	"role": [
+		"user"
+    ],
+    "password":"123456789"
+}
+
+----
+{
+	"name":"Thomas",
+	"username":"thomas",
+	"email":"thomas@test.com",
+	"role": [
+		"admin"
+    ],
+    "password":"123456789"
+}
+------
+
+http://localhost:8080/api/auth/signin
+
+{
+	"username":"adamadam",
+	"password":"123456789"
+}
+
+-----
+{
+	"username":"venkat",
+	"password":"Venkatvenkat"
+}
+
+Mohandass, Shaktdi
+
+------------- Spring JWT -----------------
+
+https://grokonez.com/spring-framework/spring-security/spring-security-jwt-authentication-restapis-springboot-spring-mvc-spring-security-spring-jpa-mysql
+C:\Development\workspace_practice\java\2\workspace_SpringBootJwtAuthentication
+
+http://www.doubleh.ie/index.php/2016/09/09/how-to-save-db-user-entity-in-spring-security-authentication-object/
+
+https://gist.github.com/esfand/6811882
+https://dimitr.im/spring-boot-jwt
+
+https://github.com/g00glen00b/microservice-demo/tree/master/uaa-service
+https://www.journaldev.com/2715/spring-security-example-tutorial
+https://zhuanlan.zhihu.com/p/54844487
+https://github.com/ywbjja/springSecurity-jwt-vue-temple
+https://www.roytuts.com/spring-security-authentication-and-role-based-authorization-using-jwt/
+
+
+-----------
+
+
+# Optional orElseThrow() method  ?
+
+@GetMapping("/{id}")
+	public Customer getCustomer(@PathVariable String id) {
+		return customerManager.getCustomer(id).orElseThrow(() -> new NotFoundException("Customer not found with id " + id));
+	}
+	
+
+# Java 8 Optional?
+
+public Optional<Customer> getCustomer(String id) {
+
+		if (id.equals("1")) {
+			return Optional.empty();
+		} else {
+			Customer cust = new Customer("1", "cust-name1");
+			cust.setAddress(id);
+			return Optional.of(cust);
+		}
+
+	}
+
+1. you must have heard about or experienced NullPointerExceptions in your programs.
+2. NullPointerExceptions are Runtime Exceptions which are thrown by the jvm at runtime.	
+3. Java 8 introduced a new type called Optional<T> to help developers deal with null values properly.
+
+Old Way.
+
+User user = findUserById("667290");
+System.out.println("User's Name = " + user.getName());  // will throw a NullPointerException
+
+The developer forgot to add the null check in his code.
+
+new code with Optional
+
+Optional<User> optional = findUserById("667290");
+
+optional.ifPresent(user -> {
+    System.out.println("User's name = " + user.getName());    
+})
+
+1. Create an empty Optional,Optional<User> user = Optional.empty(); 
+2. Create an Optional with a non-null value -
+   User user = new User("667290", "Rajeev Kumar Singh");
+   Optional<User> userOptional = Optional.of(user);
+
+3. Create an Optional with a value which may or may not be null -
+   Optional<User> userOptional = Optional.ofNullable(user);
+   
+
+4. isPresent() and  ifPresent()
+
+optional.ifPresent(value -> {
+    System.out.println("Value found - " + value);
+});
+
+
+# Java 8 like Lambda Expressions, Stream API, Optional etc.
+
+1. In Java, You can’t pass a function as an argument, or return a function from another function.
+2. Before lambda expressions were introduced, Developers used to use Anonymous class syntax for passing functionality to other methods or constructors.
+
+class Employee {
+    private String name;
+    private int age;
+
+    // Constructor, Getters, Setters (Omitted for brevity)
+    
+    List<Employee> employees = Arrays.asList(new Employee("Foo", 21),
+            new Employee("Bar", 25));
+    
+    // Sort employees based on their age by passing an anonymous comparator.
+    employees.sort(new Comparator<Employee>() {
+        @Override
+        public int compare(Employee e1, Employee e2) {
+            return e1.getAge() - e2.getAge();
+        }
+    });
+
+}
+
+3. In the above example, we wanted to pass a single compare() functionality to the sort() method for comparing two Employees.
+
+4. For doing this, we had to create an anonymous comparator object with the implementation of the compare() function, and pass it in the sort() method.
+
+5. Lambda expression allows you to pass functionality to other methods in a less verbose and more readable way.
+
+Here is how you would write the earlier employee comparator example using lambda expression -
+
+employees.sort((Employee e1, Employee e2) -> {
+    return e1.getAge() - e2.getAge();
+});
+
+or
+
+employees.sort((Employee e1, Employee e2) -> e1.getAge() - e2.getAge());
+
+or
+
+employees.sort((e1, e2) -> e1.getAge() - e2.getAge());
+
+Compare that with the earlier implementation without lambda expression. This is so concise, readable, and to the point.
+
+6. Every lambda expression in Java is internally mapped to a functional interface. The functional interface to which a lambda expression will be mapped is determined by the compiler from its surrounding context at compile time.
+
+// A lambda expression that accepts no arguments and returns void
+() -> System.out.println("Hello, World!")
+or
+(value) -> System.out.println(value)
+It can be mapped to any functional interface whose abstract method takes no arguments and returns void.
+
+# A functional interface is an interface that contains exactly one abstract method.
+
+@FunctionalInterface
+interface MyFunctionalInterface {
+    void test();
+}
+
+# Benefits of using lamda expressions. ?
+
+Advantages of lambda expressions
+
+One more - unlike anonymous classes, lambdas do NOT create a new scope, they share the same scope as the enclosing block/environment.
+
+1. It reduces the lines of code.
+2. It supports sequential and parallel execution by passing behavior in methods with collection stream API.
+3. Using Stream API and lambda expression we can achieve higher efficiency (parallel execution) in the case of bulk operations on collections.
+4.  removal of duplicated code
+
+
+# What is Stream?
+
+https://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
+
+1. A stream represents a sequence of elements and supports different kind of operations to perform computations upon those elements
+Stream represents a sequence of objects from a source, which supports aggregate operations. Following are the characteristics of a Stream -
+
+Sequence of elements - A stream provides a set of elements of specific type in a sequential manner. A stream gets/computes elements on demand. It never stores the elements.
+
+Source - Stream takes Collections, Arrays, or I/O resources as input source.
+
+Aggregate operations - Stream supports aggregate operations like filter, map, limit, reduce, find, match, and so on.
+
+List<String> myList =
+    Arrays.asList("a1", "a2", "b1", "c2", "c1");
+
+myList
+    .stream()
+    .filter(s -> s.startsWith("c"))
+    .map(String::toUpperCase)
+    .sorted()
+    .forEach(System.out::println);
+
+// C1
+// C2
+
+In the above example filter, map and sorted are intermediate operations whereas forEach is a terminal operation.
+
+Most stream operations accept some kind of lambda expression parameter, a functional interface specifying the exact behavior of the operation. 
+
+Different kind of streams#
+
+Arrays.asList("a1", "a2", "a3")
+    .stream()
+    .findFirst()
+    .ifPresent(System.out::println);  // a1
+    
+Stream.of(1.0, 2.0, 3.0)
+    .mapToInt(Double::intValue)
+    .mapToObj(i -> "a" + i)
+    .forEach(System.out::println);
+
+// a1
+// a2
+// a3    
+
+Advanced Stream
+
+List<Person> persons =
+    Arrays.asList(
+        new Person("Max", 18),
+        new Person("Peter", 23),
+        new Person("Pamela", 23),
+        new Person("David", 12));
+        
+ List<Person> filtered =
+    persons
+        .stream()
+        .filter(p -> p.name.startsWith("P"))
+        .collect(Collectors.toList());
+
+System.out.println(filtered);    // [Peter, Pamela]
+
+
+# Java 8 - Method References
+
+A method reference is described using "::" symbol. A method reference can be used to point the following types of methods -
+
+Static methods
+Instance methods
+Constructors using new operator (TreeSet::new)
+
+List names = new ArrayList();
+		
+names.add("Mahesh");
+names.add("Suresh");
+names.add("Ramesh");
+names.add("Naresh");
+names.add("Kalpesh");
+
+names.forEach(System.out::println);
+  
+
+# Declarative Transaction Management , @Transactional
+  
+  https://www.javainuse.com/spring/boot-transaction  
+  https://netsurfingzone.com/spring/spring-transaction-management-example-using-spring-boot/
+  
+
+
+2. DI-Related Annotations
+2.1. @Autowired. We can use the @Autowired to mark a dependency which Spring is going to resolve and inject. ...
+2.2. @Bean. @Bean marks a factory method which instantiates a Spring bean: ...
+2.3. @Qualifier. ...
+2.4. @Required. ...
+2.5. @Value. ...
+2.6. @DependsOn. ...
+2.7. @Lazy. ...
+2.8. @Lookup.
+
+
+------------
+
+
+JUnit is the Java library used to write tests (offers support for running tests and different extra helpers - like setup and teardown methods, test sets etc.). Mockito is a library that enables writing tests using the mocking approach.
+
+What is JUnit? A programmer-oriented testing framework for Java. JUnit is a simple framework to write repeatable tests
+What is Mockito? Tasty mocking framework for unit tests in Java.
+
+
+Mockito is used to mock interfaces so that a dummy functionality can be added to a mock interface that can be used in unit testing.
+
+https://howtodoinjava.com/mockito/junit-mockito-example/
+https://www.springboottutorial.com/spring-boot-unit-testing-and-mocking-with-mockito-and-junit
+https://howtodoinjava.com/spring-boot2/testing/spring-boot-mockito-junit-example/
+https://howtodoinjava.com/spring-boot2/testing/rest-controller-unit-test-example/
+
+Shared Serive
+https://stackblitz.com/edit/shared-service-shopping-cart?file=src%2Fapp%2Fcomponents%2Fproduct-list.component.ts
+
+
+Passing Query Parameters via routerLink
+
+https://github.com/tekTutorialsHub/Angular-Router/tree/master/Angular7
+https://stackblitz.com/edit/angular-route-parameters?file=app%2Fapp-routing.module.ts
+https://stackblitz.com/edit/angular-navigate-with-query-params?file=src%2Fapp%2Fauthentication%2Fauthentication.component.ts
+https://tutorialedge.net/typescript/angular/angular-query-params-tutorial/
+
+
+# Map
+Map operator just transforms the result of one form to another form.
+
+# ErrorHandler
+Angular ErrorHandler class is used for centralized exception handling. The default implementation of ErrorHandler prints error messages to browser console. We implement this class to create custom error handler. ErrorHandler has a method handleError(error) that executes whenever the application throws error anywhere in the application.
+
+1. Create Custom Error Handler
+
+import { Injectable, ErrorHandler } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
+
+@Injectable()
+export class GlobalErrorHandlerService implements ErrorHandler {
+    handleError(error: any) {
+      if (error instanceof HttpErrorResponse) {
+          //Backend returns unsuccessful response codes such as 404, 500 etc.				  
+          console.error('Backend returned status code: ', error.status);
+          console.error('Response body:', error.message);          	  
+      } else {
+          //A client-side or network error occurred.	          
+          console.error('An error occurred:', error.message);          
+      }     
+    }
+}
+
+Step-2: We need to configure our GlobalErrorHandlerService in application module in providers
+
+providers: [
+    GlobalErrorHandlerService,
+    { provide: ErrorHandler, useClass: GlobalErrorHandlerService },
+    -----    
+  ]
+
+Step-3: Error will be thrown in application automatically or by using throw keyword.
+
+this.countryService.addCountry(country)
+   .subscribe(data => {
+       console.log(data);
+     },
+     err => {
+       throw err;
+     }
+   ); If we are catching the error then we need to throw it using throw keyword and then handleError() method of GlobalErrorHandlerService will execute.
+   
+   
+  # WFC Angular Ques 
+   
+  1. Lazy loading in Angular?
+  2. Cli
+  
+  Angular CLI stands for Angular Command Line Interface. As the name implies, it is a command line tool for creating angular apps. \It is recommended to use angular cli for creating angular apps as you don't need to spend time installing and configuring all the required dependencies and wiring everything together.
+  The Angular CLI is used for much more than just creating an Angular project. It can be used to create components, services, pipes, directives and more. Also it helps in building, serving, testing etc. 
+  
+  check fitst node version, $ node -v
+  npm install -g @angular/cli
+  
+  ng new frontendApp
+  ng generate module about --routing
+  ng generate component about/user
+  ng g class my-new-clss
+  ng g service my-new-service
+  ng g interface my-new-interface
+  ng g modile my-module
+  ng g m login
+  ng c componet my-new-component
+  ng c pipe my-new-pipe
+  ng g c client --style scss -d
+  ng test
+  
+  ng build :-  The build will take all of our files and bundle them into five main files. It will also generate everything into a dist folder.
+  ng build --prod 
+   ng build --prod aot, We can also build with AOT to make sure our Angular app is compiled during build-time instead of in browser at run-time. This can help reduce the size of our app by more than half!
+   
+  ng g service my-data
+  ng c component parent
+  ng c component sibling
+  
+  ng generate component pos/parent
+  ng generate component pos/sibling
+  ng generate component pos/stock-status
+  
+  
+  # NPM :- npm (originally short for Node Package Manager) is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js.
+  3. Why do we use angular cli (Advanced)
+  4. Can you create angular app with cli?
+  5. how to do you empty Javascript array?
+  6. Angular 4 vs 5 changes?
+  7. Controller in Angular 2?
+  8. Whar the pipes?
+  
+  Built inPipes: Decimal Pipe, Percent Pipe and Currency Pipe, UpperCase Pipe and LowerCase Pipe
+  
+  Custome Pipe:-
+  export class WelcomePipe implements PipeTransform {
+    transform(value: string): string {
+      let message = "Welcome to " + value;
+      return message;
+    }
+} 
+
+  9. Angular fonts ( How many)?
+  
+   import Google fonts in the styles.css file of my Angular project. Here is it:
+  
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+
+npm install @fortawesome/fontawesome-svg-core
+
+  10. ngrx use in Angular?
+  
+  6 Milford Ct, Edison, NJ 08820
+  3 Lily Rd, Edison, NJ 08820
+  16 Bennington Dr Edison, NJ 08820
+  8 Colasurdo Ct, Edison, NJ 08820
+  18 Allison Ct, Edison, NJ 08820
+  
+  2 Martha St, Edison, NJ 08820
+  
+  15 Keen Ln, Edison, NJ 08820
+  4 Lipnick Ln, Edison, NJ 08820
+  
+  927 Beatrice Pkwy, Edison, NJ 08820
+  
+  OFF Market
+  
+  156 Lamar AveEdison, NJ 08820
+  
+  12 Boxwood Ct, Edison, NJ 08820
+  
+  
+  
+  Sold
+  
+  3 Brook Ave, Edison, NJ 08820
+  
+  6 Corrine St Edison, NJ 08820  670,000
+  
+  
+
+WEd - 2 PM to 3.30 PM
+Thu Feb 6, 2020 1:30pm – 2pm (EST)
+Thursday, 2/6 at 4:00 PM
+
+https://pusher.com/tutorials/infinite-scrolling-angular-cdk
+
+https://stackblitz.com/edit/angular7-virtual-scroll?file=app%2Fcdk-virtual-scroll-data-source-example.ts
+
+
+less-starchy kinds such as spinach and other leafy greens, broccoli, carrots, and green beans
+high-fiber foods into your day.
+Enjoy fruits in moderation - 1 to 3 servings per day.
+
+Quinoa.
+Farro
+Barley.
+Bulgur.
+Buckwheat.
+Sweet potatoes, yams or redskins
+
+
+starchy vegetables are high in carbs:  potatoes, peas, corn
+
+---------
+
+What's the difference between @ViewChild and @ContentChild?
+
+BNY -  Asset Services
+1 Java Testing? and How?
+2. Spring Exception Handling?
+3. final vs finally vs finalize keyword in java ?
+4. thread lifcycle ?
+
+Java Thread Life Cycle and Thread States. A java thread can be in any of following thread states during it's life cycle i.e. New, Runnable, Blocked, Waiting, Timed Waiting or Terminated. These are also called life cycle events of a thread in java.
+
+5. Spring - Bean Life Cycle?
+
+6. Whu we use Spring?
+
+7. phaser and counter java ?
+
+Phaser in Java is also one of the synchronization aid provided in concurrency util. Phaser is similar to other synchronization barrier utils like CountDownLatch and CyclicBarrier. What sets Phaser apart is it is reusable (like CyclicBarrier) and more flexible in usage. In both CountDownLatch and CyclicBarrier number of parties (thread) that are registered for waiting can't change where as in Phaser that number can vary. Also note that Phaser has been introduced in Java 7.
+
+8. ReentrantLock ?
+9. ReentrantLock vs synchronized ?
+10. volatile keyword in Java
+
+11. Java Memory Management?
+12. Functional vs Object Oriented Programming ?
+
+Functional programming (also called FP) is a way of thinking about software construction by creating pure functions. It avoid concepts of shared state, mutable data observed in Object Oriented Programming. Functional langauges empazies on expressions and declarations rather than execution of statements.
+
+13. Lambda expression vs annymous
+
+I am really sorry to say that cannot accept offer with Synechron at this point. I already accepted a full-time offer with a different company. I am sorry for the confusion.
+
+
+	

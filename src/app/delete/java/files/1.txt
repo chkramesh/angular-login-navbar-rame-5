@@ -1,0 +1,2520 @@
+Shah, Sanket <Sanket.Shah1@bnymellon.com>
+https://mysource2.bnymellon.net/pages/hr/career/
+
+// ------------------Ramesh Stackblitz --
+// https://www.concretepage.com/angular-2/angular-2-formcontrol-example
+
+// https://stackblitz.com/edit/angular-fkn3z8?file=src%2Fapp%2Fapp.component.ts
+
+// with tabs - no code
+// https://stackblitz.com/@chkramesh
+
+// with tabs- working on
+// https://stackblitz.com/edit/angular-material-table-with-multi-queries-nco2rz
+
+// with tabs - Reacitve form code
+// https://stackblitz.com/edit/angular-material-tab-example-bbzfbz
+
+// Reacitve form code
+// https://stackblitz.com/edit/angular-rjkbpo
+// https://stackblitz.com/edit/angular-form-disabled-pgw1ky
+
+
+// lot of Reacitve form code - *****
+// https://stackblitz.com/edit/angular-85xtbj
+
+// Reacitve form code - for posting issues
+// https://stackblitz.com/edit/example-angular-material-reactive-form-v4ioft
+// https://stackblitz.com/edit/example-angular-material-reactive-form-sm4qch
+// https://stackblitz.com/edit/angular-material-form-jr3saw
+// https://stackblitz.com/edit/angular-mat-formfield-flex-layout-rjewhy
+
+// gloabal error handling - have to fix
+// https://stackblitz.com/edit/angular-6-httpclient-global-error-handling-bezgtx
+// global-error-catching-angular-emv7pj
+// global-error-catching-angular-zzm2qa
+
+// good- use for experiment
+// github-uh3oom
+// github-unklbx
+
+// Working Code
+// angular-fkn3z8
+
+
+// -- Delete ?
+// https://stackblitz.com/edit/angular-os6b3c
+// https://stackblitz.com/edit/angular-eyyciy
+// https://stackblitz.com/edit/angular-reactive-form-sobsoft-fesafd
+// https://stackblitz.com/edit/angular-mat-formfield-flex-layout-f1y5av
+// https://stackblitz.com/edit/angular-mat-formfield-flex-layout-887at5
+// https://stackblitz.com/edit/angular-mat-formfield-flex-layout-stejxb
+// angular-hqphcq
+// https://stackblitz.com/edit/angular-s8v7re
+// https://stackblitz.com/edit/angular-mldo1i
+// https://stackblitz.com/edit/angular-x4vwqg
+
+
+GRAdsAcctRow  ??
+202001.0.0.192_awr-11_revolution
+202001.0.0.193_awr-11_revolution
+
+
+
+// https://stackoverflow.com/questions/46769042/subscribe-to-observable-is-returning-undefined
+// https://codecraft.tv/courses/angular/http/http-with-observables/
+// https://appdividend.com/2018/12/08/angular-7-observables-tutorial-with-example/
+
+// import { PortalConstants } from '../../../utils/portal.constants';
+
+// settings_security(): void {
+//         let SETTINGS_PAGE = PortalConstants.SETTINGS_NAVIGATION_OBJECT;
+//         let SECURITY_PAGE = PortalConstants.SETTINGS_SECURITY_NAVIGATION_OBJECT;
+//         let navigation = new NxpNavigation();
+//         navigation.parentPage = SETTINGS_PAGE;
+//         navigation.childPage = SECURITY_PAGE;
+//         this.navigationService.handleNavigation(navigation);
+//     }
+
+// src/utils/portal.constants.ts
+//export class PortalConstants {
+
+  // public static CHILD_HOME_NAVIGATION_OBJECT: any = {'id':  'household',  'name':  'Household', 'group': {'id':  'lists',  'name':  'Lists' , children: [
+  //       { 'id': 'household', 'name': 'Household'},
+  //       { 'id': 'accounts', 'name': 'Accounts'}]}};
+
+//  public static SETTINGS_NAVIGATION_OBJECT = { 'id': 'settings', 'name': 'Settings' };
+// public static LANGUAGES: any = {
+//         'ab': 'Abkhazian',
+//         'ace': 'Achinese',
+//         'ach': 'Acoli',
+//         'ada': 'Adangme',
+//         'ady': 'Adyghe',
+//         'aa': 'Afar',
+//         'afh': 'Afrihili',
+//         'af': 'Afrikaans',
+//         'afa': 'Afro-Asiatic Language',
+//         'agq': 'Aghem',
+//         'ain': 'Ainu',
+//         'ak': 'Akan',
+//         'akk': 'Akkadian',
+//         'sq': 'Albanian',
+//         'ale': 'Aleut',
+//         'alg': 'Algonquian Language',
+//         'tut': 'Altaic Language',
+//         'am': 'Amharic',
+//         'egy': 'Ancient Egyptian',
+//         'grc': 'Ancient Greek',
+//         'anp': 'Angika',
+//         'apa': 'Apache Language',
+//         'ar': 'Arabic',
+//         'an': 'Aragonese',
+//         'arc': 'Aramaic',
+//         'arp': 'Arapaho',
+//         'arn': 'Araucanian',
+//         'arw': 'Arawak',
+//         'hy': 'Armenian',
+//         'rup': 'Aromanian',
+//         'art': 'Artificial Language',
+//         'as': 'Assamese',
+//         'ast': 'Asturian',
+//         'asa': 'Asu',
+//         'ath': 'Athapascan Language',
+//         'cch': 'Atsam',
+//         'en_AU': 'Australian English',
+//         'aus': 'Australian Language',
+//         'de_AT': 'Austrian German',
+//         'map': 'Austronesian Language',
+//         'av': 'Avaric',
+//         'ae': 'Avestan',
+//         'awa': 'Awadhi',
+//         'ay': 'Aymara',
+//         'az': 'Azerbaijani',
+//         'ksf': 'Bafia',
+//         'ban': 'Balinese',
+//         'bat': 'Baltic Language',
+//         'bal': 'Baluchi',
+//         'bm': 'Bambara',
+//         'bai': 'Bamileke Language',
+//         'bad': 'Banda',
+//         'bnt': 'Bantu',
+//         'bas': 'Basaa',
+//         'ba': 'Bashkir',
+//         'eu': 'Basque',
+//         'btk': 'Batak',
+//         'bej': 'Beja',
+//         'be': 'Belarusian',
+//         'bem': 'Bemba',
+//         'bez': 'Bena',
+//         'bn': 'Bengali',
+//         'ber': 'Berber',
+//         'bho': 'Bhojpuri',
+//         'bh': 'Bihari',
+//         'bik': 'Bikol',
+//         'bin': 'Bini',
+//         'bi': 'Bislama',
+//         'byn': 'Blin',
+//         'zbl': 'Blissymbols',
+//         'brx': 'Bodo',
+//         'bs': 'Bosnian',
+//         'bra': 'Braj',
+//         'pt_BR': 'Brazilian Portuguese',
+//         'br': 'Breton',
+//         'en_GB': 'British English',
+//         'bug': 'Buginese',
+//         'bg': 'Bulgarian',
+//         'bua': 'Buriat',
+//         'my': 'Burmese',
+//         'cad': 'Caddo',
+//         'en_CA': 'Canadian English',
+//         'fr_CA': 'Canadian French',
+//         'yue': 'Cantonese',
+//         'car': 'Carib',
+//         'ca': 'Catalan',
+//         'cau': 'Caucasian Language',
+//         'cay': 'Cayuga',
+//         'ceb': 'Cebuano',
+//         'cel': 'Celtic Language',
+//         'cai': 'Central American Indian Language',
+//         'tzm': 'Central Morocco Tamazight',
+//         'chg': 'Chagatai',
+//         'cmc': 'Chamic Language',
+//         'ch': 'Chamorro',
+//         'ce': 'Chechen',
+//         'chr': 'Cherokee',
+//         'chy': 'Cheyenne',
+//         'chb': 'Chibcha',
+//         'cgg': 'Chiga',
+//         'zh': 'Chinese',
+//         'chn': 'Chinook Jargon',
+//         'chp': 'Chipewyan',
+//         'cho': 'Choctaw',
+//         'cu': 'Church Slavic',
+//         'chk': 'Chuukese',
+//         'cv': 'Chuvash',
+//         'nwc': 'Classical Newari',
+//         'syc': 'Classical Syriac',
+//         'ksh': 'Colognian',
+//         'swb': 'Comorian',
+//         'swc': 'Congo Swahili',
+//         'cop': 'Coptic',
+//         'kw': 'Cornish',
+//         'co': 'Corsican',
+//         'cr': 'Cree',
+//         'mus': 'Creek',
+//         'crp': 'Creole or Pidgin',
+//         'crh': 'Crimean Turkish',
+//         'hr': 'Croatian',
+//         'cus': 'Cushitic Language',
+//         'cs': 'Czech',
+//         'dak': 'Dakota',
+//         'da': 'Danish',
+//         'dar': 'Dargwa',
+//         'day': 'Dayak',
+//         'del': 'Delaware',
+//         'din': 'Dinka',
+//         'dv': 'Divehi',
+//         'doi': 'Dogri',
+//         'dgr': 'Dogrib',
+//         'dra': 'Dravidian Language',
+//         'dua': 'Duala',
+//         'nl': 'Dutch',
+//         'dyu': 'Dyula',
+//         'dz': 'Dzongkha',
+//         'frs': 'Eastern Frisian',
+//         'efi': 'Efik',
+//         'eka': 'Ekajuk',
+//         'elx': 'Elamite',
+//         'ebu': 'Embu',
+//         'en': 'English',
+//         'cpe': 'English-based Creole or Pidgin',
+//         'myv': 'Erzya',
+//         'eo': 'Esperanto',
+//         'et': 'Estonian',
+//         'ee': 'Ewe',
+//         'ewo': 'Ewondo',
+//         'fan': 'Fang',
+//         'fat': 'Fanti',
+//         'fo': 'Faroese',
+//         'fj': 'Fijian',
+//         'fil': 'Filipino',
+//         'fi': 'Finnish',
+//         'fiu': 'Finno-Ugrian Language',
+//         'nl_BE': 'Flemish',
+//         'fon': 'Fon',
+//         'fr': 'French',
+//         'cpf': 'French-based Creole or Pidgin',
+//         'fur': 'Friulian',
+//         'ff': 'Fulah',
+//         'gaa': 'Ga',
+//         'gl': 'Galician',
+//         'lg': 'Ganda',
+//         'gay': 'Gayo',
+//         'gba': 'Gbaya',
+//         'gez': 'Geez',
+//         'ka': 'Georgian',
+//         'de': 'German',
+//         'gem': 'Germanic Language',
+//         'gil': 'Gilbertese',
+//         'gon': 'Gondi',
+//         'gor': 'Gorontalo',
+//         'got': 'Gothic',
+//         'grb': 'Grebo',
+//         'el': 'Greek',
+//         'gn': 'Guarani',
+//         'gu': 'Gujarati',
+//         'guz': 'Gusii',
+//         'gwi': 'Gwich'in',
+//         'hai': 'Haida',
+//         'ht': 'Haitian',
+//         'ha': 'Hausa',
+//         'haw': 'Hawaiian',
+//         'he': 'Hebrew',
+//         'hz': 'Herero',
+//         'hil': 'Hiligaynon',
+//         'him': 'Himachali',
+//         'hi': 'Hindi',
+//         'ho': 'Hiri Motu',
+//         'hit': 'Hittite',
+//         'hmn': 'Hmong',
+//         'hu': 'Hungarian',
+//         'hup': 'Hupa',
+//         'iba': 'Iban',
+//         'pt_PT': 'Iberian Portuguese',
+//         'es_ES': 'Iberian Spanish',
+//         'is': 'Icelandic',
+//         'io': 'Ido',
+//         'ig': 'Igbo',
+//         'ijo': 'Ijo',
+//         'ilo': 'Iloko',
+//         'smn': 'Inari Sami',
+//         'inc': 'Indic Language',
+//         'ine': 'Indo-European Language',
+//         'id': 'Indonesian',
+//         'inh': 'Ingush',
+//         'ia': 'Interlingua',
+//         'ie': 'Interlingue',
+//         'iu': 'Inuktitut',
+//         'ik': 'Inupiaq',
+//         'ira': 'Iranian Language',
+//         'ga': 'Irish',
+//         'iro': 'Iroquoian Language',
+//         'it': 'Italian',
+//         'ja': 'Japanese',
+//         'jv': 'Javanese',
+//         'kaj': 'Jju',
+//         'dyo': 'Jola-Fonyi',
+//         'jrb': 'Judeo-Arabic',
+//         'jpr': 'Judeo-Persian',
+//         'kbd': 'Kabardian',
+//         'kea': 'Kabuverdianu',
+//         'kab': 'Kabyle',
+//         'kac': 'Kachin',
+//         'kl': 'Kalaallisut',
+//         'kln': 'Kalenjin',
+//         'xal': 'Kalmyk',
+//         'kam': 'Kamba',
+//         'kn': 'Kannada',
+//         'kr': 'Kanuri',
+//         'kaa': 'Kara-Kalpak',
+//         'krc': 'Karachay-Balkar',
+//         'krl': 'Karelian',
+//         'kar': 'Karen',
+//         'ks': 'Kashmiri',
+//         'csb': 'Kashubian',
+//         'kaw': 'Kawi',
+//         'kk': 'Kazakh',
+//         'kha': 'Khasi',
+//         'km': 'Khmer',
+//         'khi': 'Khoisan Language',
+//         'kho': 'Khotanese',
+//         'ki': 'Kikuyu',
+//         'kmb': 'Kimbundu',
+//         'rw': 'Kinyarwanda',
+//         'ky': 'Kirghiz',
+//         'tlh': 'Klingon',
+//         'kv': 'Komi',
+//         'kg': 'Kongo',
+//         'kok': 'Konkani',
+//         'ko': 'Korean',
+//         'kfo': 'Koro',
+//         'kos': 'Kosraean',
+//         'khq': 'Koyra Chiini',
+//         'ses': 'Koyraboro Senni',
+//         'kpe': 'Kpelle',
+//         'kro': 'Kru',
+//         'kj': 'Kuanyama',
+//         'kum': 'Kumyk',
+//         'ku': 'Kurdish',
+//         'kru': 'Kurukh',
+//         'kut': 'Kutenai',
+//         'nmg': 'Kwasio',
+//         'lad': 'Ladino',
+//         'lah': 'Lahnda',
+//         'lam': 'Lamba',
+//         'lag': 'Langi',
+//         'lo': 'Lao',
+//         'la': 'Latin',
+//         'es_419': 'Latin American Spanish',
+//         'lv': 'Latvian',
+//         'lez': 'Lezghian',
+//         'li': 'Limburgish',
+//         'ln': 'Lingala',
+//         'lt': 'Lithuanian',
+//         'jbo': 'Lojban',
+//         'nds': 'Low German',
+//         'dsb': 'Lower Sorbian',
+//         'loz': 'Lozi',
+//         'lu': 'Luba-Katanga',
+//         'lua': 'Luba-Lulua',
+//         'lui': 'Luiseno',
+//         'smj': 'Lule Sami',
+//         'lun': 'Lunda',
+//         'luo': 'Luo',
+//         'lus': 'Lushai',
+//         'lb': 'Luxembourgish',
+//         'luy': 'Luyia',
+//         'mk': 'Macedonian',
+//         'jmc': 'Machame',
+//         'mad': 'Madurese',
+//         'mag': 'Magahi',
+//         'mai': 'Maithili',
+//         'mak': 'Makasar',
+//         'mgh': 'Makhuwa-Meetto',
+//         'kde': 'Makonde',
+//         'mg': 'Malagasy',
+//         'ms': 'Malay',
+//         'ml': 'Malayalam',
+//         'mt': 'Maltese',
+//         'mnc': 'Manchu',
+//         'mdr': 'Mandar',
+//         'man': 'Mandingo',
+//         'mni': 'Manipuri',
+//         'mno': 'Manobo Language',
+//         'gv': 'Manx',
+//         'mi': 'Maori',
+//         'mr': 'Marathi',
+//         'chm': 'Mari',
+//         'mh': 'Marshallese',
+//         'mwr': 'Marwari',
+//         'mas': 'Masai',
+//         'myn': 'Mayan Language',
+//         'men': 'Mende',
+//         'mer': 'Meru',
+//         'mic': 'Micmac',
+//         'dum': 'Middle Dutch',
+//         'enm': 'Middle English',
+//         'frm': 'Middle French',
+//         'gmh': 'Middle High German',
+//         'mga': 'Middle Irish',
+//         'min': 'Minangkabau',
+//         'mwl': 'Mirandese',
+//         'mis': 'Miscellaneous Language',
+//         'ar_001': 'Modern Standard Arabic',
+//         'moh': 'Mohawk',
+//         'mdf': 'Moksha',
+//         'mo': 'Moldavian',
+//         'mkh': 'Mon-Khmer Language',
+//         'lol': 'Mongo',
+//         'mn': 'Mongolian',
+//         'mfe': 'Morisyen',
+//         'mos': 'Mossi',
+//         'mun': 'Munda Language',
+//         'mua': 'Mundang',
+//         'nqo': 'N’Ko',
+//         'nah': 'Nahuatl',
+//         'naq': 'Nama',
+//         'na': 'Nauru',
+//         'nv': 'Navajo',
+//         'ng': 'Ndonga',
+//         'nap': 'Neapolitan',
+//         'ne': 'Nepali',
+//         'new': 'Newari',
+//         'nia': 'Nias',
+//         'nic': 'Niger-Kordofanian Language',
+//         'ssa': 'Nilo-Saharan Language',
+//         'niu': 'Niuean',
+//         'zxx': 'No linguistic content',
+//         'nog': 'Nogai',
+//         'nai': 'North American Indian Language',
+//         'nd': 'North Ndebele',
+//         'frr': 'Northern Frisian',
+//         'se': 'Northern Sami',
+//         'nso': 'Northern Sotho',
+//         'no': 'Norwegian',
+//         'nb': 'Norwegian Bokmål',
+//         'nn': 'Norwegian Nynorsk',
+//         'nub': 'Nubian Language',
+//         'nus': 'Nuer',
+//         'nym': 'Nyamwezi',
+//         'ny': 'Nyanja',
+//         'nyn': 'Nyankole',
+//         'tog': 'Nyasa Tonga',
+//         'nyo': 'Nyoro',
+//         'nzi': 'Nzima',
+//         'oc': 'Occitan',
+//         'oj': 'Ojibwa',
+//         'ang': 'Old English',
+//         'fro': 'Old French',
+//         'goh': 'Old High German',
+//         'sga': 'Old Irish',
+//         'non': 'Old Norse',
+//         'peo': 'Old Persian',
+//         'pro': 'Old Provençal',
+//         'or': 'Oriya',
+//         'om': 'Oromo',
+//         'osa': 'Osage',
+//         'os': 'Ossetic',
+//         'oto': 'Otomian Language',
+//         'ota': 'Ottoman Turkish',
+//         'pal': 'Pahlavi',
+//         'pau': 'Palauan',
+//         'pi': 'Pali',
+//         'pam': 'Pampanga',
+//         'pag': 'Pangasinan',
+//         'pap': 'Papiamento',
+//         'paa': 'Papuan Language',
+//         'ps': 'Pashto',
+//         'fa': 'Persian',
+//         'phi': 'Philippine Language',
+//         'phn': 'Phoenician',
+//         'pon': 'Pohnpeian',
+//         'pl': 'Polish',
+//         'pt': 'Portuguese',
+//         'cpp': 'Portuguese-based Creole or Pidgin',
+//         'pra': 'Prakrit Language',
+//         'pa': 'Punjabi',
+//         'qu': 'Quechua',
+//         'raj': 'Rajasthani',
+//         'rap': 'Rapanui',
+//         'rar': 'Rarotongan',
+//         'roa': 'Romance Language',
+//         'ro': 'Romanian',
+//         'rm': 'Romansh',
+//         'rom': 'Romany',
+//         'rof': 'Rombo',
+//         'root': 'Root',
+//         'rn': 'Rundi',
+//         'ru': 'Russian',
+//         'rwk': 'Rwa',
+//         'ssy': 'Saho',
+//         'sah': 'Sakha',
+//         'sal': 'Salishan Language',
+//         'sam': 'Samaritan Aramaic',
+//         'saq': 'Samburu',
+//         'smi': 'Sami Language',
+//         'sm': 'Samoan',
+//         'sad': 'Sandawe',
+//         'sg': 'Sango',
+//         'sbp': 'Sangu',
+//         'sa': 'Sanskrit',
+//         'sat': 'Santali',
+//         'sc': 'Sardinian',
+//         'sas': 'Sasak',
+//         'sco': 'Scots',
+//         'gd': 'Scottish Gaelic',
+//         'sel': 'Selkup',
+//         'sem': 'Semitic Language',
+//         'seh': 'Sena',
+//         'see': 'Seneca',
+//         'sr': 'Serbian',
+//         'sh': 'Serbo-Croatian',
+//         'srr': 'Serer',
+//         'ksb': 'Shambala',
+//         'shn': 'Shan',
+//         'sn': 'Shona',
+//         'ii': 'Sichuan Yi',
+//         'scn': 'Sicilian',
+//         'sid': 'Sidamo',
+//         'sgn': 'Sign Language',
+//         'bla': 'Siksika',
+//         'zh_Hans': 'Simplified Chinese',
+//         'sd': 'Sindhi',
+//         'si': 'Sinhala',
+//         'sit': 'Sino-Tibetan Language',
+//         'sio': 'Siouan Language',
+//         'sms': 'Skolt Sami',
+//         'den': 'Slave',
+//         'sla': 'Slavic Language',
+//         'sk': 'Slovak',
+//         'sl': 'Slovenian',
+//         'xog': 'Soga',
+//         'sog': 'Sogdien',
+//         'so': 'Somali',
+//         'son': 'Songhai',
+//         'snk': 'Soninke',
+//         'ckb': 'Sorani Kurdish',
+//         'wen': 'Sorbian Language',
+//         'sai': 'South American Indian Language',
+//         'nr': 'South Ndebele',
+//         'alt': 'Southern Altai',
+//         'sma': 'Southern Sami',
+//         'st': 'Southern Sotho',
+//         'es': 'Spanish',
+//         'srn': 'Sranan Tongo',
+//         'suk': 'Sukuma',
+//         'sux': 'Sumerian',
+//         'su': 'Sundanese',
+//         'sus': 'Susu',
+//         'sw': 'Swahili',
+//         'ss': 'Swati',
+//         'sv': 'Swedish',
+//         'fr_CH': 'Swiss French',
+//         'gsw': 'Swiss German',
+//         'de_CH': 'Swiss High German',
+//         'syr': 'Syriac',
+//         'shi': 'Tachelhit',
+//         'tl': 'Tagalog',
+//         'ty': 'Tahitian',
+//         'tai': 'Tai Language',
+//         'dav': 'Taita',
+//         'tg': 'Tajik',
+//         'tmh': 'Tamashek',
+//         'ta': 'Tamil',
+//         'trv': 'Taroko',
+//         'twq': 'Tasawaq',
+//         'tt': 'Tatar',
+//         'te': 'Telugu',
+//         'ter': 'Tereno',
+//         'teo': 'Teso',
+//         'tet': 'Tetum',
+//         'th': 'Thai',
+//         'bo': 'Tibetan',
+//         'tig': 'Tigre',
+//         'ti': 'Tigrinya',
+//         'tem': 'Timne',
+//         'tiv': 'Tiv',
+//         'tli': 'Tlingit',
+//         'tpi': 'Tok Pisin',
+//         'tkl': 'Tokelau',
+//         'to': 'Tongan',
+//         'zh_Hant': 'Traditional Chinese',
+//         'tsi': 'Tsimshian',
+//         'ts': 'Tsonga',
+//         'tn': 'Tswana',
+//         'tum': 'Tumbuka',
+//         'tup': 'Tupi Language',
+//         'tr': 'Turkish',
+//         'tk': 'Turkmen',
+//         'tvl': 'Tuvalu',
+//         'tyv': 'Tuvinian',
+//         'tw': 'Twi',
+//         'kcg': 'Tyap',
+//         'en_US': 'United States (English)',
+//         'udm': 'Udmurt',
+//         'uga': 'Ugaritic',
+//         'ug': 'Uighur',
+//         'uk': 'Ukrainian',
+//         'umb': 'Umbundu',
+//         'und': 'Unknown Language',
+//         'hsb': 'Upper Sorbian',
+//         'ur': 'Urdu',
+//         'uz': 'Uzbek',
+//         'vai': 'Vai',
+//         've': 'Venda',
+//         'vi': 'Vietnamese',
+//         'vo': 'Volapük',
+//         'vot': 'Votic',
+//         'vun': 'Vunjo',
+//         'wak': 'Wakashan Language',
+//         'wal': 'Walamo',
+//         'wa': 'Walloon',
+//         'wae': 'Walser',
+//         'war': 'Waray',
+//         'was': 'Washo',
+//         'cy': 'Welsh',
+//         'fy': 'Western Frisian',
+//         'wo': 'Wolof',
+//         'xh': 'Xhosa',
+//         'yav': 'Yangben',
+//         'yao': 'Yao',
+//         'yap': 'Yapese',
+//         'yi': 'Yiddish',
+//         'yo': 'Yoruba',
+//         'ypk': 'Yupik Language',
+//         'znd': 'Zande',
+//         'zap': 'Zapotec',
+//         'dje': 'Zarma',
+//         'zza': 'Zaza',
+//         'zen': 'Zenaga',
+//         'za': 'Zhuang',
+//         'zu': 'Zulu',
+//         'zun': 'Zuni'
+//     };
+
+      // public static TIME_ZONES: any = {
+      //   'America/Los_Angeles': 'Pacific Standard Time',
+      //   'America/New_York': 'Eatern Standard Time',
+      //   'Asia/Calcutta': 'Indian Standard Time',
+      //   'Asia/Kolkata': 'Indian Standard Time'
+      //  };
+//}
+// TemplateStringsArray
+// fromPromise
+
+// https://forum.ionicframework.com/t/get-subscribe-data-out-of-function/76612/2
+// https://angular.io/guide/http
+
+// # RxJS
+// 1) Pipes in Angular: A pipe takes in data as input and transforms it to the desired output
+// https://angular.io/guide/pipes
+
+// 2) pipe() function in RxJS: You can use pipes to link operators together. Pipes let you combine multiple functions into a single function.
+
+// RxJS Operators are functions that build on the observables foundation to enable sophisticated manipulation of collections.
+
+// For example, RxJS defines operators such as map(), filter(), concat(), and flatMap().
+// You can use pipes to link operators together. Pipes let you combine multiple functions into a single function.
+
+// https://stackoverflow.com/questions/52934247/angular-observer-catch-error-on-component
+// https://www.c-sharpcorner.com/article/handling-errors-in-angular/
+// https://stackblitz.com/edit/global-error-catching-angular?file=app%2Fapp.module.ts
+// https://stackblitz.com/github/melcor76/global-error-handling?file=src%2Fapp%2Fapp.module.ts
+
+// good- use for experiment
+// github-uh3oom
+// github-unklbx
+
+// Working Code
+// angular-fkn3z8
+
+
+
+// https://stackblitz.com/github/riyadali/townofbabylon/?file=src%2Fapp%2Fin-memory-data.service.ts
+
+// ******* How to use Gloabl *******
+// https://stackblitz.com/edit/angular-x32any
+// https://stackoverflow.com/questions/34986922/define-global-constants-in-angular-2
+
+// ******** taking different file for DEV / INT and PROD*********
+
+// https://blog.usejournal.com/how-to-map-rest-api-data-using-decorator-pattern-in-angular-6-94eb49ba16b1
+
+// Angular HttpClient modify response in service
+// https://stackoverflow.com/questions/47617169/angular-httpclient-modify-response-in-service
+
+// MAT autocomplete ********************
+// https://stackblitz.com/github/bithost-gmbh/ngx-mat-select-search-example
+// https://stackblitz.com/edit/autocomplete-force-selection-tests-w2fqww?file=app%2Fapp.component.html
+// https://stackblitz.com/edit/angular-material-autocomplete-async2?file=src%2Fapp%2Fin-memory-data.service.ts
+// https://stackblitz.com/edit/angular-material2-issue-wmgcaj
+// How to use the force-item-list on the mat-autocomplete
+
+// https://stackoverflow.com/questions/40171914/what-is-the-difference-between-formcontrolname-and-formcontrol
+
+// advisorId: any | undefined;
+// const data = fromPromise(advCancelPromiseRsp );
+
+
+
+
+// https://codehandbook.org/how-to-implement-auto-complete-in-angular-4/
+
+// https://stackoverflow.com/questions/46268259/clear-angular-material-autocomplete-after-selection
+// https://code-maze.com/angular-material-form-validation/
+
+// Ramesh StackBlitz
+https://stackblitz.com/edit/angular-material-table-with-multi-queries-nco2rz
+https://stackblitz.com/edit/angular-fkn3z8
+
+Flex Layout
+https://stackblitz.com/edit/stackoverflowcom-questions-41665737-angular-2-flex-layout-hei?file=src/app/app.component.html
+
+Nested
+https://stackblitz.com/edit/angular-nested-forms-cva
+
+ ************ Custome Validations *******************
+ https://medium.com/@zeljkoradic/custom-form-validators-in-angular-6-using-regular-expressions-d421a5655adf
+ *************
+ https://stackoverflow.com/questions/46667375/angular-form-validations-values-have-to-be-different-to-initial-values
+ https://stackblitz.com/edit/angular-rc452r
+ https://medium.com/@realTomaszKula/angular-cross-field-validation-d94e0d063b61
+ https://stackblitz.com/edit/ng-cross-validation
+ https://www.infragistics.com/community/blogs/b/infragistics/posts/how-to-do-conditional-validation-on-valuechanges-method-in-angular-reactive-forms-
+
+ https://medium.com/free-code-camp/validating-reactive-forms-with-default-and-custom-form-field-validators-in-angular-5586dc51c4ae
+ https://stackblitz.com/edit/angular-validation-summary
+ With getter
+ https://malcoded.com/posts/angular-reactive-form-validation/
+
+ **** with model ************
+ https://stackblitz.com/edit/angular-validation-summary
+
+ Invalid credentials or Token might have been expired! So please login again
+
+ ---------------  Oct/2019 ------------------------------------------
+
+ # BehaviorSubject
+
+ https://github.com/ReactiveX/rxjs/issues/4692
+ https://pillar-soft.com/2018/07/02/behavior-subjects-in-angular-6/
+ https://hassantariqblog.wordpress.com/2016/12/03/angular2-using-loaderspinner-as-angular-service-in-angular-2-application/
+ https://hassantariqblog.wordpress.com/2017/03/22/angular2-using-custom-loader-spinner-as-service-in-angular-2-application/
+ https://stackblitz.com/edit/angular-yadden
+
+ # The BehaviorSubject
+Using the BehaviorSubject allows you to share states between different areas of the application in a quick way but could also easily get
+messy (hard to maintain) and not always needed when managing a shareable state of the app in a redux pattern using rxjs store
+
+# I would only expose the BehaviorSubject as an observable. The only place to emit new values would be within the same service so there is only ONE place to emit new data.
+
+private _isUserAuthenticated = new BehaviorSubject<boolean>(false);
+isUserAuthenticated$ = this._isUserAuthenticated.asObservable();
+  setIsUserAuthenticated(isAuthenticated: boolean) {
+  this._isUserAuthenticated.next(isAuthenticated);
+}
+
+************ Spinner with resuable component  *******
+https://www.freecodecamp.org/news/how-to-create-reusable-loading-indicator-for-angular-projects-d0a11f4631e0/
+https://www.npmjs.com/package/@btapai/ng-loading-indicator
+
+
+{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2ZW5rYXQiLCJzY29wZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNTcwMjE0MjM4LCJleHAiOjE1NzAyMTc4Mzh9.mvaSs2DnUfHmaMWN2EF_5heo_LMk7XUFZ3QHVEZCq_8"}}}
+
+# What is difference between subject and BehaviorSubject?
+A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. A Subject doesn't hold a value
+
+# BehaviorSubject?
+
+BehaviorSubject vs Observable : RxJS has observers and observables, Rxjs offers a multiple classes to use with data streams, and one of them is a BehaviorSubject.
+
+Observables : Observables are lazy collections of multiple values over time.
+
+BehaviorSubject:A Subject that requires an initial value and emits its current value to new subscribers.
+
+app.component.ts
+
+behaviourService.setName("behaviour");
+
+behaviour.service.ts
+
+private name = new BehaviorSubject("");
+getName = this.name.asObservable();`
+
+constructor() {}
+
+setName(data) {
+  this.name.next(data);
+}
+custom.component.ts
+
+behaviourService.subscribe(response=>{
+  console.log(response);    //output: behaviour
+});
+
+# When to use Subject & BehaviorSubject?
+
+https://shrestharohit.com.np/subject-behavioursubject-rxjs-angular/
+
+We now clearly know the difference between Subject and BehaviorSubject. Subject on subscription doesn't provide any initial value while
+BehaviorSubject provides value on subscription. So, in the situation where you are confident that the initial value will be is
+something we use BehaviorSubject.
+
+For example, let's take an example of a showing image on a user's profile. Upon unavailability of the image from the user, we need to show
+a default placeholder image. So, in such a case, we know a default value for the image is always a placeholder image. So, we use BehaviorSubject instead of Subject.
+In case, where no image must be shown if the user doesn't upload any photo, Subject must be used.
+
+****************** # Angular  State Management in Angular2+ ? ****
+
+https://www.tsmean.com/articles/angular/state-management/
+https://github.com/tsmean/animal-angular
+
+
+npm install -g node@7.10.1
+
+npm install -g node@11.9.0
+
+v11.9.0
+
+
+
+SELECT a.fin_inst_id, b.partner_id, b.partner_fullname
+FROM ws_partner_fi_registry a, ws_partners b
+WHERE a.partner_id = b.partner_id
+order by fin_inst_id
+				
+Ti get permissions,
+
+
+"SELECT PARTNER_ID,PARTNER_LOGIN,PARTNER_PWD,PARTNER_STATUS,PARTNER_FULLNAME,VALID_FROM,"+
+					" VALID_TO,CREATETIMESTAMP,CREATEDBY,UPDATEDTIMESTAMP,PROVIDES_FI_ID,FI_ID_TYPE,"+
+					" CONTACT_FIRST_NAME,CONTACT_LAST_NAME,CONTACT_MIDDLE_NAME,CONTACT_FIRST_NAME,CONTACT_PHONE,"+
+					" CONTACT_ADDR_LINE1,CONTACT_ADDR_LINE2,CONTACT_ZIP_CODE,CONTACT_CITY,CONTACT_STATE,"+
+					" CONTACT_COUNTRY,CONTACT_EMAIL,CONTACT_FAX,PARTNER_TYPE,FILE_GENERATE_FLAG,"+
+					" FILE_GEN_SUCCESS_EMAIL ,FILE_GEN_FAILURE_EMAIL,PARTNER_APP_LINK,DESTINATION_PT,"+
+					" ANCHOR_PT,PARTNER_AUTH,DEFAULT_URL,USER_ID_CREATION,STATIC_FI_ID"+
+				"  FROM WS_PARTNERS " +
+				" WHERE partner_id = "+id,
+
+
+//Get all partner FIs to display in view
+
+SELECT PARTNER_FI_AUTH_ID, PARTNER_ID, FIN_INST_ID, STATUS, ENTERPRISE_FLAG,
+				    USER_REG_CODE, FILE_GENERATE_FLAG, FI_SPECIFIC_URL, FI_SPECIFIC_USER_ID, FI_SPECIFIC_PWD,
+				    USE_FI_SPECIFIC_USER_ID, ANCHOR_GRP_ID, APPLY_FI_ANCHOR_TO_ADV, ADV_ENTITLE_ALL,
+				    INV_ENTITLE_ALL, FI_ENTITLE_ALL"
+		        FROM WS_PARTNER_FI_AUTH "
+		       WHERE PARTNER_ID=   +id
+
+				
+				
+ select FIN_INST_ID,FIN_INST_NAME from AVN_STACK_FI_MAPPER WHERE FIN_INST_NAME IS NOT NULL order by FIN_INST_NAME
+
+
+ Route Guarding in angular is a mechanism of protecting a route. Angular provides the following set of guards and their purpose.
+
+CanActivate: Provides guard navigation to a route
+CanDeactivate: Provides guard navigation away from the current route
+CanActivateChild: Provides guard navigation to a child route
+Resolve: Perform route data retrieval before the route activation
+CanLoad: Provides guard navigation to an asynchronously loaded feature module
+
+
+login.guard.ts
+				
+				
+				 export class LoginGuard implements OnInit, CanActivate {
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    console.log('Login guard activated!');
+  }
+
+  // If the administration component is clicked angular will activate the guard
+  // to check if the user is authorized user or not.
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable | Promise | boolean {
+    // TODO - Add the authentication and authorization mechanism.
+    return this.router.navigate(['/login']);
+  }
+}
+
+app-routing.module.ts
+
+// Authentication guard.
+// Will display the login component if the admin component is clicked!
+import { LoginGuard } from './guard/login.guard';
+
+// Routes definition.
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: UserComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [LoginGuard] },
+  { path: 'login', component: LoginComponent }  // Will be activated by the login-guard to check user is authorised to access admin page.
+];
+
+
+# javascript array of objects vs array of values?
+# Angular HttpClient Response? returns an Observable
+
+1. HttpClient returns an Observable with the Response object, versus
+in AngularJs,  $http which returns Promises.
+
+2. The major difference between Promises and Observables is that Observables may emit data more than once, which is why they can be subscribed to and unsubscribed from.
+3. The other major difference between $http and HttpClient is that HttpClient doesn't actually make the request to the server until there is a subscription to the observable.
+
+
+#  How to optimize Angular app?
+1. Consider lazy loading instead of fully bundled app if the app size is more.
+2. Make sure that any 3rd party library, which is not used, is removed from the application.
+3. Have all dependencies and dev-dependencies are clearly separated.
+4. Make sure the application doesn’t have un-necessary import statements.
+5. Make sure the application is bundled, uglified, and tree shaking is done.
+6. Consider AOT compilation.
+
+# What is an observable?
+
+An Observable is a unique Object similar to a Promise that can help manage async code. Observables are not part of the JavaScript language so we need to rely on a popular Observable library called RxJS. The observables are created using new keyword. Let see the simple example of observable,
+
+    import { Observable } from 'rxjs';
+
+    const observable = new Observable(observer => {
+      setTimeout(() => {
+        observer.next('Hello from a Observable!');
+      }, 2000);
+    });`
+	
+# What are the ways to control AOT compilation?
+You can control your app compilation in two ways
+
+1. By providing template compiler options in the tsconfig.json file
+2. By configuring Angular metadata with decorators
+
+# Angular CLI
+Angular provides support for command-line interface tools. These tools can be used for adding components, testing, instant deploying, etc.
+
+# What is AOT (Ahead-Of-Time) Compilation?
+Answer: Each Angular app gets compiled internally. The Angular compiler takes in the JS code, compiles it and then produces some JS code. This happens only once per occasion per user. It is known as AOT (Ahead-Of-Time) compilation.
+
+# http vs Https rest services
+HTTP is unsecured while HTTPS is secured. HTTP sends data over port 80 while HTTPS uses port 443.
+HTTP operates at application layer, while HTTPS operates at transport layer. No SSL certificates are required for HTTP,
+with HTTPS it is required that you have an SSL certificate and it is signed by a CA
+	
+
+
+https://medium.com/@LuisEspino/quick-answers-to-angular-interview-questions-abc95da66e2c
+
+
+TypeScript - Build Tools
+Build Tools are utilities that help automate the transformation and bundling of your code into a single file. Most JavaScript projects use these build tools to automate the build process.
+
+There are several common build tools available that can be integrated with TypeScript. We will take a look at how to integrate TypeScript with some of these tools:
+
+Browserify
+Grunt
+Gulp
+Webpack
+Browserify
+
+Use Browserify plugin Tsify for compiling TypeScript files.
+Install Tsify using NPM (Node.js Package Manager) using the following command:
+npm install tsify
+
+Backup
+pom.cml
+
+Wsdmin JavaCode
+WsAdmin AngularCOde
+Awr Angular Code
+				
+#				
+Albridge Wealth reporting, is welath reporting tool to manage ROL (Rate of return) calculation.
+1. Account Performance
+2. Portfolio performnace
+3. Individual Account
+
+to manage Partner List and details maintance
+
+# CSS vs SCSS ?
+Scss can take css code and work. SCSS is fully compatible with the syntax of CSS, while still supporting the full power of Sass. Scss is an extension of the syntax of CSS. This means that every valid CSS stylesheet is a valid SCSS file with the same meaning.
+
+SCSS contains all the features of CSS and contains more features that are not present in CSS which makes it a good choice for developers to use it.
+SCSS is full of advanced features.
+SCSS offers variables, you can shorten your code by using variables. It is a great advantage over conventional CSS.
+
+Feature #1: Variables
+Feature #2: Nesting
+
+Feature #3: Mixins
+
+$font-color: red;
+@mixin my-font($font-color) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  color: $font-color;
+}
+
+Feature #4: Imports
+
+// Your main Sass file
+@import 'file';
+@import 'anotherFile';
+.class {
+  // Your code
+}				 Ext.application({
+    name : 'Fiddle',
+
+    launch : function() {
+        Ext.Msg.alert('Fiddle', 'Welcome to Sencha Fiddle!');
+    }
+});
+
+/////////////////////////////////
+
+angang new angular-tour-of-heroes
+ng new customer-crud
+
+ng new book-store-material-app --style=scss
+
+# angular comes with a component called ng-template that allows us to declare any part of the Angular template.
+
+ng serve --open
+ng serve --open --port=4202
+ng serve --open --port=4201
+ng generate component login --module=app.module
+
+----------
+ng generate class Customer
+ng generate service Customer
+ng generate component Customer
+ng generate component CustomerDetails
+ng generate component AddCustomer
+ng generate module AppRouting
+ng generate class customer
+ng generate class mock-customers
+
+- ng g s Customer
+– ng g c CreateCustomer
+– ng g c CustomerDetailscd angular
+– ng g c CustomersList
+– ng g c SearchCustomers
+---------
+
+Find a random node from an imbalanced binary search tree.
+
+######## cassandra ##########
+1. C:\Program Files\DataStax-DDC\apache-cassandra\bin
+execute cassandra.bat
+
+2. C:\Program Files\DataStax-DDC\apache-cassandra\bin
+command prompt --> cqlsh
+
+3. use javasampleapproach;
+
+4. insert into book (id, title, author, description, published ) values(now(), 'Java', 'John', 'Advanced Java', 2000);
+#####################
+
+
+http://localhost:8080/api/books
+http://localhost:8084/api/customers
+
+
+----------
+ng generate class Customer
+ng generate service Customer
+ng generate component Customer
+ng generate component CustomerDetails
+ng generate component AddCustomer
+ng generate module AppRouting
+ng generate class customer
+ng generate class mock-customers
+
+- ng g s Customer
+– ng g c CreateCustomer
+– ng g c CustomerDetailscd angular
+– ng g c CustomersList
+– ng g c SearchCustomers
+---------
+
+git remote add origin https://github.com/username/myproject.git
+git remote add origin https://github.com/chkramesh/shopping-app1.git
+
+git config --global chkramesh@gmail.com "you@example.com"
+git config --global chkramesh "ramesh.cherukuri"
+
+Apache Install
+
+https://docs.moodle.org/36/en/Manual_install_on_Windows_7_with_Apache_and_MySQL
+
+goto Admin CMD propmet
+
+cd C:\Apache24\bin
+httpd -k install
+httpd -k start
+
+httpd -k restart
+
+Enter  http://localhost on browser
+
+ng build --prod --base-href /mydemo/
+https://stackoverflow.com/questions/43038060/deploy-angular-2-to-apache-server
+
+--------------------------------------------------------------------------------------
+
+https://grokonez.com/frontend/angular/angular-6/angular-6-service-with-observable-data-for-asynchronous-operation
+https://grokonez.com/frontend/angular/angular-6/how-to-integrate-bootstrap-with-angular-angular-6
+https://grokonez.com/frontend/angular/angular-6/angular-6-template-driven-form-ngmodel-for-two-way-data-binding
+https://grokonez.com/frontend/angular/angular-6/angular-6-httpclient-get-post-put-delete-requests-springboot-restapis-bootstrap-4
+
+--Book--
+https://www.packtpub.com/web-development/learning-angular-second-edition
+https://github.com/markclow/learn-angular-fast
+
+https://medium.com/codingthesmartway-com-blog/angular-material-and-angular-6-material-design-for-angular-6b1a3ee476f0
+https://medium.com/@mail.bahurudeen/simple-crud-functionality-using-angular-5-with-bootstrap-4-f7baac0d2000
+
+-----  Layout --
+https://stackblitz.com/edit/angular-flex-layout-seed?file=app%2Fapp.component.ts
+https://github.com/angular/flex-layout
+https://github.com/angular/flex-layout
+========
+
+# If you decide to use Bootstrap 4, you should probably go with one of it’s angular wrappers (ng-bootstrap or ngx-bootstrap).
+# Angular Material and Bootstrap are both design libraries, which offer many usefull components as well as some kind
+  of responsive layout- system (for Angular Material it is Angular Flex Layout).
+
+https://www.thetechieshouse.com/angular-4-bootstrap-modal-popup/
+https://www.techiediaries.com/angular-bootstrap/
+------------
+
+npm install rxjs-compat --save
+---
+
+https://www.devglan.com/angular/material-sidenav-example
+https://www.devglan.com/angular/angular-hide-sidenav-login-page
+C:\development\AngularWS\angular6-hide-sidenav-example
+not working
+
+--- Layout ----
+https://theinfogrid.com/tech/developers/angular/responsive-navbar-angular-flex-layout/
+C:\development\AngularWS\Responsive-Navbar-with-Angular-Material-and-Angular-Flex-Layout
+https://code.tutsplus.com/tutorials/how-to-use-material-design-in-angular-6--cms-31671
+https://github.com/tutsplus/how-to-use-material-design-in-angular-6
+https://www.tutorialesprogramacionya.com/angularya/detalleconcepto.php?punto=35&codigo=35&inicio=20
+------------------------------------------------------------------------------------------------------------
+
+https://www.devglan.com/angular/angular-material-dialog
+https://www.devglan.com/angular/angular-6-example
+C:\development\AngularWS\angular6-example
+Login not working
+
+https://auth0.com/blog/creating-beautiful-apps-with-angular-material/
+Crud With Popup
+C:\development\AngularWS\angular-material
+chkramesh@gmail.com / Gilli
+
+----------------------------------------
+
+C:\development\AngularWS\lemon-mart
+https://github.com/duluca
+https://github.com/duluca/local-weather-app
+test@test.com / testtesttest  manager@test.com / testtesttest  clerk@test.com/testtesttest
+Cashier@test.com
+------------------------------------------------------------
+
+https://github.com/chandermani/angular6byexample
+C:\development\AngularWS\angular6byexample\trainer
+--------------------------------------------------------------
+
+C:\development\AngularWS\ng-sidenave
+------------------------
+Building Modern Web Applications Using Angular
+Kasagoni S.K. - Building Modern Web Applications Using Angular - 2017.pdf
+C:\development\AngularWS\ng-book
+One chapter is worrking
+
+https://github.com/angular/flex-layout/issues/831
+
+# use below command for Angular 4 to Angular 6 version
+ npm install rxjs@6 rxjs-compat@6 --save
+
+ Follow these steps to use the JSON server: Install the JSON server npm package in our application root directory.
+ 1. npm install json-server --save-dev Add the following command to the scripts section in the package.json file to
+ 2. run the JSON server.       "json-server": "json-server --watch db.json --port 4567"
+ 3. npm run json-server
+
+ https://www.diynetwork.com/how-to/rooms-and-spaces/garage/11-garage-bike-storage-ideas-pictures
+
+ ------------ Working ----------------
+ C:\development\AngularWS\book-multi-components
+ C:\development\AngularWS\book-search
+ C:\development\AngularWS\book-services
+ C:\development\AngularWS\book-services-refactored
+
+ C:\development\AngularWS\book-store
+ C:\development\AngularWS\book-store-extended
+ C:\development\AngularWS\book-store-material-app
+
+ C:\development\AngularWS\book-forms
+ C:\development\AngularWS\book-form-validations
+ C:\development\AngularWS\book-reactive-forms
+----------------------------------------------------
+
+C:\development\AngularWS\customer-crud
+working
+
+------
+
+C:\development\AngularWS\angular-routing
+
+-------------------------March/24/2019--------------------------------------
+Check for Common Modal popup window
+https://blog.angulartraining.com/how-to-pass-custom-content-to-an-angular-component-83a77da9f5be
+https://github.com/alcfeoh/ng2-training
+C:\development\AngularWS\ng2-training
+
+C:\development\AngularWS\ng-online-store
+https://github.com/alcfeoh/ng-online-store
+
+https://github.com/alcfeoh/ng-weather
+C:\development\AngularWS\ng-weather
+
+popup window
+http://trashvin.blogspot.com/2017/12/just-another-custom-alert-for-angular.html
+https://github.com/trashvin/messagebox-like-angular-alertbox
+
+https://blog.thoughtram.io/angular/2017/11/13/easy-dialogs-with-angular-material.html
+
+not working - delete
+http://www.bentedder.com/create-reusable-address-component-angular-4/
+ng new reusable-address-app --style=scss
+C:\development\AngularWS\reusable-address-app
+
+reactive-template-driven
+
+Working
+https://blog.bitsrc.io/how-to-build-dynamic-components-in-angular-6-41f50abddc64
+hero
+C:\development\AngularWS\hero
+
+Working
+Parent-Child Example
+https://www.intertech.com/Blog/angular-component-tutorial-inputs-outputs-and-eventemitters/
+https://github.com/rmroot/ng-example/tree/master/src/app/core/component-interaction
+C:\development\AngularWS\ng-example
+
+
+-----------------------------------------------------------
+
+C:\development\AngularWS\Responsive-Navbar-with-Angular-Material-and-Angular-Flex-Layout
+Just Display
+------------
+Angular Material ***
+https://www.barbarianmeetscoding.com/blog/2017/02/08/building-beautiful-web-apps-with-angular-material-part-ii/
+https://www.barbarianmeetscoding.com/blog/2017/01/31/building-beautiful-web-apps-with-angular-material-part-i/
+C:\development\AngularWS\talk-angular-material
+
+Forms
+https://www.barbarianmeetscoding.com/blog/2016/03/29/getting-started-with-angular-2-step-by-step-5-forms-and-validation
+https://malcoded.com/posts/angular-fundamentals-reactive-forms
+https://stackblitz.com/edit/example-angular-material-reactive-form?file=app%2Fapp.component.ts
+https://stackblitz.com/edit/example-angular-material-reactive-form-vxs2mu?file=app%2Fapp.component.ts
+https://stackblitz.com/angular/qvaoqqgbqkb
+
+---------------------------------------------------------------------------------------
+
+C:\development\AngularWS\Angular-Forms
+C:\development\AngularWS\Angular-JumpStart
+
+-----------------
+
+https://www.apress.com/us/book/9781484236482?gclid=CjwKCAjwgabeBRBuEiwACD4R5sxfvlIb0GrXt3HVH5SlKm3F-8hB1oA8bqUg6s0CN3cyzGc_iW8RpBoC0RsQAvD_BwE
+https://github.com/Apress/pro-angular-6
+
+
+--
+
+Forms
+https://itnext.io/working-with-angular-2-form-reactive-forms-approach-37e19a3af995
+https://github.com/Karthik-Chowdary/Angular-Front-to-Back
+https://www.linkedin.com/pulse/angular-5-reactive-forms-dynamic-rows-validation-value-sobinovsky/
+https://stackblitz.com/edit/angular-reactive-form-sobsoft?file=package.json
+https://stackblitz.com/edit/lacolaco-angular-flex-layout-example?file=src%2Fapp%2Fcard.component.html
+
+angular-mat-table
+https://github.com/marinantonio/angular-mat-table-crud
+CRUD - With popup
+https://stackblitz.com/edit/angular-material-table-with-multi-queries
+https://www.dotnettricks.com/learn/angularmaterial/datatable-crud-operations-mean-stack
+
+https://stackblitz.com/edit/dmgrave-ng-simple-crud-v1?file=app%2Ftodo-list%2Ftodo-list.component.html
+
+Crud poup
+http://www.codaffection.com/angular-material-tutorial/build-angular-material-app-crud-form-design/
+C:\development\AngularWS\Angular-Material-CRUD-Design\CompleteAngularMaterialApp
+
+https://github.com/CodAffection/Angular-Material-Popup-Dialog-Model
+C:\development\AngularWS\Angular-Material-Popup-Dialog-Model\CompleteAngularMaterialApp
+
+https://github.com/CodAffection/Firebase-CRUD-in-Angular-Material
+C:\development\AngularWS\Firebase-CRUD-in-Angular-Material\Firebase CRUD with Angular Material
+
+
+https://www.cc28tech.com/angular-material-crud-forms-part-3/
+
+https://github.com/marinantonio/angular-mat-table-crud
+https://www.djamware.com/post/5bca67d780aca7466989441f/angular-7-tutorial-building-crud-web-application
+
+
+
+tool bar  and angular-mat-table
+https://stackblitz.com/edit/angular-tqpols?file=app%2Ftabs-view%2Ftabs-view.component.html
+https://stackblitz.com/edit/angular-material-expandable-table-rows?file=app%2Fapp.component.html
+https://angular-wnhmhd-o6pq3b.stackblitz.io/
+https://stackblitz.com/edit/angular-wnhmhd-o6pq3b?file=app/table-pagination-example.html
+https://stackblitz.com/edit/data-table-multiple-data-source
+https://www.sitepoint.com/angular-material-design-components/
+**
+https://github.com/marinantonio/angular-mat-table-crud/blob/master/README.md
+C:\development\AngularWS\angular-mat-table-crud
+
+Toolbar
+https://stackblitz.com/edit/responsive-menu-angular-material-flex-layout?file=src%2Fapp%2Fapp.component.css
+https://stackoverflow.com/questions/45035421/changing-material2-md-toolbar-height
+
+Angular Communication
+https://github.com/DeborahK/Angular-Communication
+https://www.c-sharpcorner.com/article/communication-between-angulars-components/
+
+---Feb/2019 ---
+
+http://jasonwatmore.com/post/2018/10/29/angular-7-user-registration-and-login-example-tutorial
+
+Same example with Webpack
+C:\development\AngularWS\angular-7-registration-login-example
+use npm start
+
+Same example with Cli
+C:\development\AngularWS\angular-7-registration-login-example-cli
+use ng serve --open
+
+http://jasonwatmore.com/post/2018/11/28/nodejs-role-based-authorization-tutorial-with-example-api
+C:\development\AngularWS\node-role-based-authorization-api
+
+http://localhost:4000/users
+http://localhost:4000/users/:id
+
+-----
+
+************************
+Web Server Configuration for Angular Development
+https://mobiarch.wordpress.com/2017/12/28/web-server-configuration-for-angular-development/
+
+
+http://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial#jwt-interceptor-ts
+http://jasonwatmore.com/post/2018/06/14/nodejs-mongodb-simple-api-for-authentication-registration-and-user-management
+http://jasonwatmore.com/post/2018/11/22/angular-7-role-based-authorization-tutorial-with-example
+http://jasonwatmore.com/post/2018/10/29/angular-7-user-registration-and-login-example-tutorial
+
+
+https://www.jvandemo.com/learn-how-to-make-authentication-in-your-angular-applications-simpler-and-more-consistent/
+https://www.techiediaries.com/angular-jwt/
+https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage
+https://stackoverflow.com/questions/44133536/is-it-safe-to-store-a-jwt-in-localstorage-with-reactjs
+https://logrocket.com/blog/jwt-authentication-best-practices/
+
+**** nodejs and jwt ( 2 applications)
+https://www.toptal.com/angular/angular-6-jwt-authentication
+https://github.com/sschocke/angular-jwt-todo
+
+https://angular-academy.com/angular-jwt/
+
+https://dev.to/hitman666/jwt-authentication-in-an-angular-application-with-a-go-backend--13cg
+
+---------------------------------------------------------------------------------------
+
+Global HTTP error catching in
+
+https://hackernoon.com/global-http-error-catching-in-angular-4-3-9e15cc1e0a6b
+https://stackblitz.com/edit/global-error-catching-angular?file=app%2Fapp.module.ts
+
+angular6-global-error-handling
+https://scotch.io/@vigneshsithirai/angular-6-7-http-client-interceptor-with-error-handling
+
+https://scotch.io/bar-talk/error-handling-with-angular-6-tips-and-best-practices192
+https://scotch.io/bar-talk/error-handling-with-angular-6-tips-and-best-practices192#toc-the-shortcomings-of-errorhandler
+
+********
+https://blog.angularindepth.com/expecting-the-unexpected-best-practices-for-error-handling-in-angular-21c3662ef9e4
+https://stackblitz.com/github/melcor76/global-error-handling?file=src%2Fapp%2Fapp.component.ts
+https://stackblitz.com/github/melcor76/global-error-handling?file=src%2Fapp%2Fserver-error.interceptor.ts
+https://www.concretepage.com/angular/angular-custom-error-handler
+*******
+
+https://itnext.io/angular-secure-your-application-routes-a7f71a87e97f
+https://medium.com/@aleixsuau/error-handling-angular-859d529fa53a
+https://www.concretepage.com/angular/angular-custom-error-handler
+
+Model
+
+https://stackblitz.com/edit/angular-material-modal?embed=1&file=app/dialog-overview-example.ts&view=preview
+
+https://stackblitz.com/edit/angular-6-custom-modal-dialog?file=app%2F_content%2Fapp.less
+
+https://stackblitz.com/edit/angular-modal-example?file=app%2Fmodal%2Fmodal.module.ts
+https://stackblitz.com/github/aveferrum/angular-material-demo
+https://stackblitz.com/edit/material-dialogs-sample?file=app%2Fdialogs%2Fdialogs.service.ts
+
+******- material style Sheet and ag grid **************
+https://stackblitz.com/edit/ag-grid-base?file=app%2Fapp.component.html
+
+https://stackblitz.com/edit/angular-ogyy69?file=src%2Fstyles.scss
+https://stackblitz.com/edit/angular-cccnjp-ylmzf9?file=styles.css
+https://stackblitz.com/edit/angular-cccnjp-ylmzf9?file=app/sidenav-responsive-example.html
+https://stackblitz.com/edit/angular-responsive-material-grid-leocaseiro?file=app%2Fgrid%2Fgrid.component.ts
+
+
+
+popup
+http://embed.plnkr.co/Jn2Wqt6SPFeClGWhd6fA/
+
+https://medium.com/ag-grid/building-a-crud-application-with-ag-grid-part-4-3189034df922
+
+Angular bootstrap
+https://www.smashingmagazine.com/2019/02/angular-application-bootstrap/
+https://auth0.com/blog/real-world-angular-series-part-3/
+
+
+https://github.com/sschocke/angular-jwt-todo.git
+
+
+28996
+
+---------------
+
+----------------
+
+Nkurland@aetea.com
+
+https://www.logicbig.com/tutorials/spring-framework/spring-data-access-with-jdbc/transactional-annotation.html
+https://nitayneeman.com/posts/restructuring-an-angular-application-with-feature-modules/
+
+--------------
+
+
+
+
+
+
+
+--------
+https://github.com/angular/angular-cli/issues/10673
+
+--------------- 12/31/2018 ---------------------------------------------------------
+
+https://code.tutsplus.com/tutorials/jwt-authentication-in-angular--cms-32006
+
+https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3
+https://mherman.org/blog/authentication-in-angular-with-ngrx/
+https://www.toptal.com/angular/angular-6-jwt-authentication
+https://www.techiediaries.com/angular-jwt/
+
+http://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial
+http://jasonwatmore.com/post/2018/05/23/angular-6-jwt-authentication-example-tutorial
+https://embed.plnkr.co/plunk/TIPmK3
+
+http://www.nikola-breznjak.com/blog/go/jwt-authentication-angular-application-go-backend/
+https://www.rdegges.com/2018/please-stop-using-local-storage/
+
+https://devdactic.com/ionic-4-login-angular/
+
+Http Interceptors vs jwt
+
+
+# What are Route Guards?
+Angular’s route guards are interfaces which can tell the router whether or not it should allow navigation to a requested route.
+They make this decision by looking for a true or false return value from a class which implements the given guard interface.
+
+There are five different types of guards.
+
+CanActivate
+CanActivateChild
+CanDeactivate
+CanLoad
+Resolve
+
+# Routing Decisions Based on Token Expiration
+If you’re using JSON Web Tokens (JWT) to secure your Angular app (and I recommend that you do), one way to make a decision about whether or not a route
+should be accessed is to check the token’s expiration time. It’s likely that you’re using the JWT to let your users access protected resources on your backend.
+If this is the case, the token won’t be useful if it is expired, so this is a good indication that the user should be considered “not authenticated”.
+
+# Use angular-jwt in your AuthService
+
+// src/app/auth/auth.service.ts
+import { Injectable } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
+@Injectable()
+export class AuthService {
+  constructor(public jwtHelper: JwtHelperService) {}
+  // ...
+  public isAuthenticated(): boolean {
+    const token = localStorage.getItem('token');
+    // Check whether the token is expired and return
+    // true or false
+    return !this.jwtHelper.isTokenExpired(token);
+  }
+}
+Note: This example assumes that you are storing the user’s JWT in local storage.
+
+# Create a new service which implements the route guard. You can call it whatever you like, but something like auth-guard.service is generally sufficient.
+
+// src/app/auth/auth-guard.service.ts
+import { Injectable } from '@angular/core';
+import { Router, CanActivate } from '@angular/router';
+import { AuthService } from './auth.service';
+@Injectable()
+export class AuthGuardService implements CanActivate {
+  constructor(public auth: AuthService, public router: Router) {}
+  canActivate(): boolean {
+    if (!this.auth.isAuthenticated()) {
+      this.router.navigate(['login']);
+      return false;
+    }
+    return true;
+  }
+}
+The service injects AuthService and Router and has a single method called canActivate. This method is necessary to properly implement the CanActivate interface.
+
+# Checking for a User’s Role
+
+we may wish to only permit access to a route for users that have a certain role attached to their account. To handle these cases we can modify the guard to look for a
+certain role in the payload of the user’s JWT.
+
+Install jwt-decode so we can read the JWT payload.
+
+npm install --save jwt-decode
+Since there will be times that we want to use both the catch-all AuthGuard and a more fine-grained role-based guard, let’s create a new service so we can handle both cases.
+
+Create a new guard service called RoleGuardService.
+
+----------
+
+Why JWTs?
+JSON Web Tokens, has three sections, the header, payload and signature. The header contains information about the token and hashing algorithm used, while the payload contains information such as user information, expiry time and any information you wish to add.
+
+The Signature part is why we are using JWTs. It secures the token, ensuring that if someone – say a frontend user – tampers with it, you will know. It is a hash of the encoded header and payload, along with a secret which only you should know. This makes it perfect, for authentication and authorization purposes, passing information to the client that is tamper proof.
+
+This ensures that, if someone were to change the token on the frontend to beat the Route guard, the server would know if they tried to act using the token they modified, to change something. This of course relies on the fact that the secret key or password used to sign the token remains secret. You can learn more about JWTs here.
+
+-------------
+
+Angular 7 JWT Interceptor
+The JWT Interceptor intercepts http requests from the application to add a JWT auth token to the Authorization header if the user is logged in.
+
+It's implemented using the HttpInterceptor class that was introduced in Angular 4.3 as part of the new HttpClientModule. By extending the HttpInterceptor class you can create a custom interceptor to modify http requests before they get sent to the server.
+
+
+-------------
+https://blog.thoughtram.io/angular/2016/07/18/guards-in-angular-2.html
+
+# PROTECTING ROUTES USING GUARDS IN ANGULAR
+
+Protecting routes is a very common task when building applications, as we want to prevent our users from accessing areas that they’re not allowed to access, or, we might want to ask them for confirmation when leaving a certain area
+
+Guard Types :- There are four different guard types we can use to protect our routes:
+
+CanActivate - Decides if a route can be activated
+CanActivateChild - Decides if children routes of a route can be activated
+CanDeactivate - Decides if a route can be deactivated
+CanLoad - Decides if a module can be loaded lazily
+
+Defining Guards
+Guards can be implemented in different ways, but after all it really boils down to a function that returns either Observable<boolean>, Promise<boolean> or boolean. In addition, guards are registered using providers, so they can be injected by Angular when needed.
+
+Defining resolvers
+As mentioned ealier, route resolvers allow us to provide the needed data for a route, before the route is activated. There are different ways to create a resolver and we’ll start with the easiest: a function. A resolver is a function that returns either Observable<any>, Promise<any> or just data. This is great, because our ContactsService#getContact() method returns an Observable<Contact>.
+
+Resolvers need to be registered via providers.
+
+-------------------
+Testing angular components using Jasmine, Karma and Protractor.
+
+# Angulat Testing
+
+1. Unit testing and end-to-end testing
+2. How to write isolated and integrated unit tests
+3. How to unit test components and services
+
+Jasmine, Karma, Protractor
+
+# Unit testing Unit testing focuses on testing the individual parts of the applications; for example, in the Angular application, we unit test functionality inside the components, services, directives, and pipes.
+
+# Tooling
+
+1. Jasmine: Jasmine is a behavior-driven development framework in order to test JavaScript code
+2. Karma: Karma is a test runner we use for running our unit test while developing.
+3. Protractor: Protractor is an end-to-end testing framework for Angular applications
+
+# karma.conf.js: This is the Karma configuration file that specifies which plugins to use, which application and test files to load, which browser(s) to use, and how to report test results.
+
+# karma-test-shim.js: This is the shim that makes Karma work with the Angular test environment and launches Karma itself;
+it includes some of the SystemJS configuration in order to load Angular test utilities.
+
+
+# Jasmine basics Before we start writing the unit tests, let's look at some Jasmine functions that we use for writing every unit test. describe(): The describe function is a global Jasmine function. It is used for grouping similar kinds of tests/specs together in a suite. The describe functions can be nested. The syntax is as follows:
+      describe('suite name', () => {
+      //unit tests - it functions...      }); it(): It is a Jasmine function used for writing the actual unit tests. The syntax is as follows:
+      it('test name', () => {      //unit test code      }); Matchers: Matchers are the built-in Jasmine functions used along with the expect() function
+      to compare the actual value with the expected value. Here are the matcher functions provided by Jasmine:
+      toBe()
+      toEqual()
+      toMatch()
+      toBeDefined()
+      toBeUndefined()
+      toBeNull()
+      toBeNaN()
+      toBeTruthy()
+      toBeFalsy()
+      toHaveBeenCalled()
+      toHaveBeenCalledWith()
+      toHaveBeenCalledTimes()
+      toContain() toBeLessThan() toBeLessThanOrEqual()
+
+npm install jasmine-core jasmine --save-dev
+npm install karma karma-cli --save-dev
+npm install karma-jasmine karma-chrome-launcher
+
+C:\development\AngularWS\book-unit-testing-setup
+C:\development\AngularWS\book-isolated-unit-tests
+C:\development\AngularWS\book-store-start-test
+C:\development\AngularWS\book-store-test
+
+
+#  Testing services
+
+In our Book Store application, we have BookStoreService, which communicates with the external REST service using the Angular HTTP service to perform different operations on
+the books list: The code for src/app/books/book-store.service.spec.ts is as follows:
+
+The BookStoreService constructor is expecting an Angular HTTP service object as a parameter, and this is required because of the methods in our service using HTTP methods, such as get(), post(), and delete() for different operations. However, we should not call the real REST service using HTTP because we want to test our service behavior, not the external REST service. In these scenarios, we should mock the required object, and this can be simply done using the jasmine.createSpyObj() method.
+
+
+import { BookStoreService } from './book-store.service';
+describe('BookStoreService', () => {
+
+   let bookStoreService: BookStoreService,  mockHttp;
+
+   beforeEach(() => {
+
+      mockHttp = jasmine.createSpyObj('mockHttp', ['get', 'post', 'delete']);
+
+      bookStoreService = new BookStoreService();
+   });
+
+    describe('deleteBook', () => {
+       it('should remove the book', () => {
+           const book: Book = {
+              id: 12,
+              isbn: 9781849692380,
+              title: 'test title',
+              authors: 'test author',
+              published: 'test date',
+              description: 'test description',
+              coverImage: 'test image'
+        };
+         mockHttp.delete.and.returnValue(Observable.of(book));
+         const response = bookStoreService.deleteBook(12);
+         response.subscribe(value => {         expect(value).toBe(book);
+       });
+       it('should call http delete method with right url', () => {
+         const id = 12;
+         const url = `http://58e15045f7d7f41200261f77.mockapi.io/ api/v1/books/${id}`;
+         mockHttp.delete.and.returnValue(Observable.of(true));
+         const response = bookStoreService.deleteBook(id);
+         expect(mockHttp.delete).toHaveBeenCalledWith(url,
+         jasmine.any(Object));
+       });
+  });
+
+});
+
+# Testing components
+
+In our Book Store application, we have multiple components. Let's look at how to test BooksListComponent. Testing the component is very similar to the way we tested service.
+
+Our BooksListComponent is dependent on BookStoreService, so we need to mock this. We have a booksList property, which is initially empty after we invoke the ngOnInit() method.
+
+
+# Integrated unit tests
+Testing simple bindings and method logic is enough most of the times, but we also want to understand how our component logic is working along with the templates, child components, and routes.
+To do this, isolated unit tests are enough.
+
+# Testing components with dependencies
+
+Up till now, we have tested a simple component with two properties, but components become complex with dependencies such as services, other components, child components, routes, and forms.
+
+Let's take a look at BooksListComponent, which is dependent on the BookStoreService, and the BookStoreService method returns the Observables as results,
+and our template uses router directives. We already know how to deal with dependent services using Jasmine's spy() methods.
+
+-------------------------
+
+
+-------------
+https://www.devglan.com/spring-security/spring-boot-oauth2-jwt-example
+https://www.devglan.com/spring-security/spring-boot-security-oauth2-example
+
+
+https://www.devglan.com/spring-security/spring-boot-jwt-auth
+https://www.c-sharpcorner.com/article/authentication-and-authorization-in-angular/
+
+https://www.devglan.com/angular/angular-7-crud-example
+
+
+ng server -o command which invokes the default node js server and angular application gets deployed automatically.
+
+https://www.devglan.com/angular/angular-7-crud-example
+https://www.devglan.com/spring-security/spring-boot-jwt-auth
+https://www.devglan.com/spring-security/spring-boot-jwt-auth
+
+
+------------- Oct 07 2019 --------------------------
+
+https://stackblitz.com/edit/angular-material-table-with-multi-queries-nco2rz
+https://stackblitz.com/edit/angular-fkn3z8
+
+Flex Layout
+https://stackblitz.com/edit/stackoverflowcom-questions-41665737-angular-2-flex-layout-hei?file=src/app/app.component.html
+
+Nested
+https://stackblitz.com/edit/angular-nested-forms-cva
+
+----------------------------------------
+# Angular Component communication
+
+Simplest way to share data between two unrelated Components in Angular
+
+In Angular, it is essential to know how components communicate with each other. If you use a component inside another component,
+they create a parent child relationship.  In such a scenario, parent and child components communicate to each other in following ways:
+
+@Input()
+@Output()
+Temp Ref Variable
+ViewChild and ContentChild
+
+2. how data can be shared between components that are not related to each other using Angular Service.?
+
+********** Practice below two  **********
+https://www.infragistics.com/community/blogs/b/infragistics/posts/understanding-output-and-eventemitter-in-angular
+https://www.c-sharpcorner.com/article/share-data-between-sibling-components-in-angular-using-rxjs-behaviorsubject/
+
+***********Angular Idel timeout **************
+
+https://blog.bitsrc.io/how-to-implement-idle-timeout-in-angular-af61eefdb13b
+
+https://itnext.io/inactivity-auto-logout-w-angular-and-ngrx-3bcb2fd7983f
+https://anupampawar.com/2018/11/07/angular-5-angular-6-user-idle-session-tracking/
+https://www.code-sample.com/2017/07/angular-2-auto-logout-using-ng2-idle.html
+https://www.coreycleary.me/category/angular/
+https://www.pika.dev/npm/bn-ng-idle
+
+C:\Development\workspace_Angular\angular-idle-timeout
+------------------------------------------------------
+
+---- Angulat State Management --------------------- **************
+
+
+
+https://github.com/jbandi/ng-subject-vs-getter
+
+https://blog.angularindepth.com/state-management-in-angular-using-akita-82f117d282dd
+
+What kind of states are there?
+Router state
+Often forgotten, but one of the most important pieces of state a web application can have. Putting state in the route gives us the following advantages:
+
+We can use the browser navigation buttons
+We can bookmark the state
+We can can copy and paste the url with the state to other users
+We don’t have to manage it, it’s always there in the route
+
+https://dev.to/steveblue/redux-with-observable-stores-in-angular-1b3b
+
+
+-------------
+
+https://medium.com/swlh/spring-boot-security-jwt-hello-world-example-b479e457664c#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImVlNGRiZDA2YzA2NjgzY2I0OGRkZGNhNmI4OGMzZTQ3M2I2OTE1YjkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYmYiOjE1NzA4MjM3NDcsImF1ZCI6IjIxNjI5NjAzNTgzNC1rMWs2cWUwNjBzMnRwMmEyamFtNGxqZGNtczAwc3R0Zy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjEwMjY3Mjc3OTM1OTE5Nzg2NTc0MCIsImVtYWlsIjoiY2hrcmFtZXNoQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJuYW1lIjoiUmFtZXNoIENoZXJ1a3VyaSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQUF1RTdtQU5uOWR6bUtnZllSQUpoMlBtdVYzOUwyLU8xbmthd1c1dHRXbGMwQT1zOTYtYyIsImdpdmVuX25hbWUiOiJSYW1lc2giLCJmYW1pbHlfbmFtZSI6IkNoZXJ1a3VyaSIsImlhdCI6MTU3MDgyNDA0NywiZXhwIjoxNTcwODI3NjQ3LCJqdGkiOiJjOWE3MzI3YjIwYzExYWVkZmNmZjIwNTlmZWI2ZTc5MTI4YjY2YTc2In0.lF1qKDeZ5MwfN50iPULKF0bHsdwrS5xFpg2_GpJ568pbU9fy937nzprI_WxsPHg_e2svjKReumdfPxXzWjHwuazPGYcGXQEGNsbix3FJAFF0Pyzk12o7IjWDPtBi9y4E7yZT8-O_3LKPxyuVVOoom4VEaenKKBQy0QuSC5UEjm0LVXdHivfVp4QthK3Fh4WtLTtc0yay3kqGo23ptLcfexhE5ijDdw-jDsdAzzenTzwr5CfeeEvE2RyB68U2LDgKca37OkClZ1IfNOzUmksdWurvkn-EqEGaiyFFH92V5MQb293DMwGw2eLKf1w8iPxqvUzo5b5uHNaBfZq3M2HgaQ
+
+https://www.javainuse.com/spring/boot-jwt-mysql
+
+-----------------------------------------------------------
+https://github.com/mrin9/Angular-SpringBoot-REST-JWT
+C:\Development\workspace_practice\Angular\Angular-SpringBoot-REST-JWT\webui
+C:\Development\workspace_practice\java\WorkspaceAngular-SpringBoot-REST-JWT
+----------------
+
+https://cloudwrk.com/mysql-server-5-7-x-zip-install/
+http://www.mysqltutorial.org/mysql-sample-database.aspx
+https://grokonez.com/spring-framework/spring-security/angular-spring-boot-jwt-authentication-example-angular-6-spring-security-mysql-full-stack-part-1-overview-and-architecture
+
+
+Code
+C:\Development\workspace_practice\ang-spring-boot-jwt
+
+Create new workspace
+C:\Development\workspace_practice\workspace_java
+
+---------------------------
+Run --> Run As - Maven Build
+
+1. Select your project
+clean install spring-boot:run
+
+spring-boot:run
+
+{
+	"username":"javainuse",
+	"password":"password"
+	
+}
+
+localhost:8080/authenticate
+
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE1NzMzMTcwODcsImlhdCI6MTU3MzI5OTA4N30.dj4sjEDDzBMiWdTCjG0-tfkjFvaS--uDWTy-5KWHJe_HjFz8WbcdJhtwzGRCDmqgFX8aAKqMSTZm0PLYWeHGcQ
+
+http://localhost:8080/employees
+
+----------------
+
+http://localhost:8080/api/auth/signup
+
+{
+	"name":"Adam",
+	"username":"adam",
+	"email":"adam@test.com",
+	"role": [
+		"user",
+		"pm"
+    ],
+    "password":"123456789"
+
+}
+-----
+
+{
+	"name":"Jack",
+	"username":"jack",
+	"email":"jack@test.com",
+	"role": [
+		"user"
+    ],
+    "password":"123456789"
+}
+
+----
+{
+	"name":"Thomas",
+	"username":"thomas",
+	"email":"thomas@test.com",
+	"role": [
+		"admin"
+    ],
+    "password":"123456789"
+}
+------
+
+http://localhost:8080/api/auth/signin
+
+{
+	"username":"adamadam",
+	"password":"123456789"
+}
+
+-----
+{
+	"username":"venkat",
+	"password":"Venkatvenkat"
+}
+
+Mohandass, Shaktdi
+
+------------- Spring JWT -----------------
+
+https://grokonez.com/spring-framework/spring-security/spring-security-jwt-authentication-restapis-springboot-spring-mvc-spring-security-spring-jpa-mysql
+C:\Development\workspace_practice\java\2\workspace_SpringBootJwtAuthentication
+
+http://www.doubleh.ie/index.php/2016/09/09/how-to-save-db-user-entity-in-spring-security-authentication-object/
+
+https://gist.github.com/esfand/6811882
+https://dimitr.im/spring-boot-jwt
+
+https://github.com/g00glen00b/microservice-demo/tree/master/uaa-service
+https://www.journaldev.com/2715/spring-security-example-tutorial
+https://zhuanlan.zhihu.com/p/54844487
+https://github.com/ywbjja/springSecurity-jwt-vue-temple
+https://www.roytuts.com/spring-security-authentication-and-role-based-authorization-using-jwt/
+
+------------------------------------------------------------------------------------------------
+# providedIn ( Since Angular 6)
+
+Use providedIn: 'root' for services which should be available in whole application as singletons.
+
+1. The Old Way™ of doing DI in Angular — providers: []
+2. The New Way™ of doing DI in Angular — providedIn: 'root' | SomeModule
+
+providedIn: 'root' is the easiest and most efficient way to provide services since Angular 6:
+
+The service will be available application wide as a singleton with no need to add it to a module's providers array (like Angular <= 5).
+If the service is only used within a lazy loaded module it will be lazy loaded with that module
+If it is never used it will not be contained in the build (tree shaked).
+
+It's also possible to specify that a service should be provided in a particular @NgModule. For example, if you don't want a service to be available to applications unless they import a module you've created, you can specify that the service should be provided in the module
+
+import { Injectable } from '@angular/core';
+import { UserModule } from './user.module';
+
+@Injectable({
+  providedIn: UserModule,
+})
+export class UserService {
+}
+This method is preferred because it enables Tree-shaking (Tree shaking is a step in a build process that removes unused code from a code base) of the service if nothing injects it.
+
+If it's not possible to specify in the service which module should provide it, you can also declare a provider for the service within the module:
+
+import { NgModule } from '@angular/core';
+import { UserService } from './user.service';
+
+@NgModule({
+  providers: [UserService],
+})
+export class UserModule {
+}
+
+#  Remove support for <template> tag and “<ng-template>” should be used. (Since Angular 6)
+
+# CLI Changes: Two new commands have been introduced
+— ng update <package>
+* Analyse package.json and recommend updates to your application
+
+# LI + Material starter templates: Let angular create code snippet for your basic components. e.g:
+— Material Sidenav
+
+# Angular 7:
+Released on October 2018
+This is a major release and expanding to the entire platform including-
+— Core framework,
+— Angular Material,
+— CLI
+CLI Prompts: The CLI will now prompt users as when running common commands likeng new or ng add @angular/material with the intend of getting aid for building a new project using SCSS.
+Added a new interface — UrlSegment[] to CanLoad interface
+Added a new interface — DoBootstrap interface
+Angular 7 added a new compiler — Compatibility Compiler (ngcc)
+Introduce a new Pipe called — KeyValuePipe
+Angular 7 now supporting to TypeScript 2.9.
+Added a new elements features — enable Shadow DOM v1 and slots
+Added a new router features — warn if navigation triggered outside Angular zone
+Added a new mapping for ngfactory and ngsummary files to their module names in AOT summary resolver.
+Added a new “original” placeholder value on extracted XMB
+Added a new ability to recover from malformed URLs
+Added a new compiler support dot (.) in import statements and also avoid a crash in ngc-wrapped
+Update compiler to flatten nested template fns
+
+# New ng-compiler
+
+Angular 7 added a new compiler called the Angular Compatibility Compiler (ngcc). Just like the name suggests, the angular compiler offers an 8-phase rotating ahead-of-time compilation(AOT) and most of the angular applications noticed a massive reduction (95-99%) in bundle sizes.
+
+# Virtual scrolling
+The scrolling package enables loads and unloads items from the DOM depending upon visible parts of lists, resulting into a much faster experience for users having huge scrollable lists.
+
+# Angular Elements :-
+https://winsmarts.com/getting-started-with-angular-elements-1bbdf2e748a6
+https://www.infragistics.com/community/blogs/b/infragistics/posts/step-by-step-for-creating-your-first-angular-element
+https://medium.com/@sumeet.ru/how-to-create-custom-angular-element-a9e92dac2c13
+https://netbasal.com/understanding-the-magic-behind-angular-elements-8e6804f32e9f
+
+Angular Elements are reusable components, which can be used outside Angular.
+Angular Elements allow us to create reusable Angular components, which can be used outside of the Angular application. You can use an Angular Element in any other application such as normal HTML, React, etc.  Essentially, Angular Elements are normal components, which are packaged as Custom Elements.
+
+npm install @angular/elements
+
+# ngComponentOutlet
+
+***************
+https://stackblitz.com/edit/angular-ng-component-outlet-example
+https://stackblitz.com/edit/angular-reusable-components-ngtemplateoutlet
+
+# ngTemplateOutlet
+
+# Dynamic module loading and compilation
+But what if your components are defined on the other module that you don’t want to load until the components in it are actually required? We can do that.
+This will be something similar to what router is doing with loadChildren configuration option
+
+# Ahead-of-Time Compilation
+The compiler we’ve been using in the examples above is called Just-In-Time (JIT) compiler. You may have also heard about Ahead-Of-Time (AOT) compiler. Actually, Angular has only one compiler and it is referred to as JIT or AOT depending on when it is used. If it’s used during runtime in a browser it is JIT. If you compile your components before the code is executed in a browser, it’s AOT compilation.
+
+# Using Reactive Froms with ngModel is deprecated in angular 6 and will be removed in angular 7.
+
+
+# Angular Router guard  - notes
+https://www.concretepage.com/angular-2/angular-2-4-route-guards-canactivate-and-canactivatechild-example
+
+**********************
+# 2 way binding with Reactive forms
+https://stackoverflow.com/questions/40458739/two-way-binding-in-reactive-forms
+https://stackblitz.com/edit/angular-b7n6wr?file=app%2Fslider-overview-example.html
+https://morrisdev.com/2017/04/reactive-forms-with-angular/
+
+
+https://blog.jscrambler.com/building-user-registration-form-with-reactive-forms-in-angular-7/
+
+Meterial
+https://stackblitz.com/edit/angular-fdbvpa?file=src%2Fapp%2Fsidenav%2Fsidenav.component.html
+
+https://stackblitz.com/edit/angular-v6xwte
+https://stackblitz.com/edit/angular-fdbvpa?file=src%2Fapp%2Fsidenav%2Fsidenav.component.html
+https://blog.jscrambler.com/building-user-registration-form-with-reactive-forms-in-angular-7/
+https://github.com/JscramblerBlog/reactive-form-demo/tree/master/form-app
+
+https://tomastrajan.github.io/angular-ngrx-material-starter#/examples/authenticated
+https://github.com/tomastrajan/angular-ngrx-material-starter
+
+*******************
+Role based links
+https://jasonwatmore.com/post/2018/11/22/angular-7-role-based-authorization-tutorial-with-example
+https://stackblitz.com/angular/brrmqmvyqpyj?file=app%2Ftab-nav-bar-basic-example.html
+https://www.concretepage.com/angular-2/angular-2-4-route-guards-canactivate-and-canactivatechild-example
+https://stackblitz.com/edit/angular-jb87vi?file=src%2Fapp%2Fabout%2Fabout.component.css
+https://wesleygrimes.com/angular/2019/02/24/angular-routing-best-practices-for-enterprise-applications.html
+*** Roles **
+http://coding-karma.com/2018/06/17/role-based-access-control-in-angular-4-route-guards-in-depth/
+https://github.com/theo4u/AuthGuard
+****
+
+https://stackblitz.com/edit/angular-route-resolves-adding-resolve-guard?file=app%2Fnews-resolver.service.ts
+*** Lorie **
+https://stackblitz.com/edit/angular-login-hide-navbar-layout?file=src%2Fapp%2Fapp.module.ts
+
+https://www.concretepage.com/angular-2/angular-2-4-route-guards-canactivate-and-canactivatechild-example
+
+Resolver
+https://stackblitz.com/edit/angular-route-resolves-full-example?file=app%2Fnews.component.ts
+
+
+-- NGFor
+https://stackoverflow.com/questions/56464016/change-color-of-selected-radio-button-in-a-ngfor-loop
+https://malcoded.com/posts/angular-ngfor/
+
+# Spting boot advantages?
+# What is functionl interface? Only one obstact method.
+# Lamda expressions use? Example?
+# Angular comopnets?
+# Angular resolver?
+# Angular build process?
+# Inner Join vs outer join?
+# Singlton call Code? how to make sure only one instance?
+# HashMap ( how it works)?
+# Singleton Code ( Leaks)?
+
+
+ # Prudentiall Q's
+
+1. How to maintain the State?
+
+2. Can you inject angaulr service in Interface?
+No, interfaces are not supported for DI. With TypeScript interfaces are not available at runtime anymore.
+he reason you can't use interfaces is because an interface is a TypeScript design-time artifact. JavaScript doesn't have interfaces. The TypeScript interface disappears from the generated JavaScript.
+There is no interface type information left for Angular to find at runtime.
+
+
+1. Is it possible to inject interface with angular2?
+
+Solution 1:
+
+The easiest solution is just to define an abstract class which implements the interface. Often, you need a abstract class anyway.
+
+Interface:
+
+import {Role} from "../../model/role";
+
+export interface ProcessEngine {
+
+     login(username: string, password: string):string;
+
+     getRoles(): Role[];
+}
+Abstract Class:
+
+import {ProcessEngine} from "./process-engine.interface";
+
+export abstract class ProcessEngineService implements ProcessEngine {
+
+    abstract login(username: string, password: string): string;
+
+    abstract getRoles(): Role[];
+
+}
+Concrete Class:
+
+import { Injectable } from '@angular/core';
+import {ProcessEngineService} from "./process-engine.service";
+
+@Injectable()
+export class WebRatioEngineService extends ProcessEngineService {
+
+    login(username: string, password: string) : string {...}
+
+    getRoles(): Role[] {...}
+
+}
+Now you can define your provider like usual:
+
+@NgModule({
+      ...
+      providers: [
+        ...,
+        {provide: ProcessEngineService, useClass: WebRatioEngineService}
+      ]
+})
+
+
+$  what is first ? .pipe(first()) ?
+
+resp{"token":"eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1NzYyNTAxNzAsImV4cCI6MTU3NjMzNjU3MH0.FaOe2zZz_vtU2uWBb0Z3zlzrQYVxY84BBWB5mW3SXjgp9gHsDAqJ0qGt0dnH97Ef2BnvMzWiZQgTRjVsqaLo5g",
+"type":"Bearer","username":null,"authorities":[{"authority":"ROLE_ADMIN"},{"authority":"ROLE_USER"}],"userDo":{"id":1,"email":"vekat@testmail.com","name":"Venkat","username":"venkat","password":"½éäjÛÞžF­","roles":["ROLE_ADMIN","ROLE_USER"]},"tokenType":"Bearer","accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1NzYyNTAxNzAsImV4cCI6MTU3NjMzNjU3MH0.FaOe2zZz_vtU2uWBb0Z3zlzrQYVxY84BBWB5mW3SXjgp9gHsDAqJ0qGt0dnH97Ef2BnvMzWiZQgTRjVsqaLo5g"}
+
+
+resp{"errorCode":0,"errorDescription":null,"errorMessage":null,"respObject":{"valid":true,"token":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWJlZGkiLCJzY29wZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE1NzYyNjAwOTMsImV4cCI6MTU3NjI2MzY5M30.6KM8ezvB3sz_raIPg0_uWNqunlnOaVW_E27q9MSp8es"}}}
+
+Angular Errors and Interceptor
+
+https://itnext.io/how-to-handle-your-run-time-errors-in-your-angular-application-8d72fefbf8a4
+
+https://stackblitz.com/github/melcor76/global-error-handling
+
+https://medium.com/angular-in-depth/expecting-the-unexpected-best-practices-for-error-handling-in-angular-21c3662ef9e4
+http://coding-karma.com/2018/07/08/angular-5-global-http-error-interceptor/
+https://www.tektutorialshub.com/angular/error-handling-in-angular-applications/
+https://scotch.io/@vigneshsithirai/angular-6-7-http-client-interceptor-with-error-handling
+
+************
+https://netbasal.com/angular-2-persist-your-login-status-with-behaviorsubject-45da9ec43243
+*********
+
+******
+https://medium.com/angular-in-depth/top-10-ways-to-use-interceptors-in-angular-db450f8a62d6
+
+C:\Development\workspace_Angular\github-nwbakt-pclozu
+https://auth0.com/blog/real-world-angular-series-part-2/
+
+https://stackoverflow.com/questions/57440067/angular-not-reading-token-from-backend-server
+--------------------------
+
+https://stackoverflow.com/questions/46580349/angular-4-conditional-display-on-user-status
+https://plnkr.co/edit/LMUDDHynMkoAp7DdAHro?p=preview
+
+https://my.honda.com/rcherukuri08989
+5FNYF6H91HB058350
+
+https://www.amazon.com/ECOGARD-XA10486-Premium-Ridgeline-Odyssey/dp/B01LWM3AMJ/ref=au_as_r?_encoding=UTF8&Make=Honda%7C59&Model=Pilot%7C758&Year=2017%7C2017&ie=UTF8&n=15684181&s=automotive&vehicleId=1&vehicleType=automotive
+
+https://www.amazon.com/ECOGARD-XC35519-Premium-Ridgeline-Crosstour/dp/B00AKEWOAU/ref=pd_bxgy_263_2/143-1408495-0794222?_encoding=UTF8&pd_rd_i=B00AKEWOAU&pd_rd_r=21001c43-9f01-4609-acd6-41364ce1b23d&pd_rd_w=eYrKt&pd_rd_wg=ZOfP5&pf_rd_p=09627863-9889-4290-b90a-5e9f86682449&pf_rd_r=2H0A0FN7R8TR1TJFYFSJ&psc=1&refRID=2H0A0FN7R8TR1TJFYFSJ
+
+
+C:\Development\workspace_practice\java\2
+C:\Development\workspace_Angular\angular-material-tab-router
+
+https://www.oreilly.com/library/view/angular-6-for/9781786462909/0bafd100-511a-4cac-9c86-7eba561b1f2a.xhtml
+
+https://jasonwatmore.com/post/2018/10/29/angular-7-user-registration-and-login-example-tutorial
+https://stackblitz.com/edit/angular-8-basic-authentication-example?file=src%2Fapp%2F_services%2Fauthentication.service.ts
+https://jasonwatmore.com/post/2018/11/22/angular-7-role-based-authorization-tutorial-with-example
+https://jasonwatmore.com/post/2018/11/16/angular-7-jwt-authentication-example-tutorial
+
+https://stackoverflow.com/questions/56924703/enable-logout-button-only-after-login-in-angular-7
+https://stackblitz.com/edit/angular-login-hide-navbar-ngif?file=src%2Fapp%2Fauth%2Fauth.service.ts
+https://engineering.datorama.com/the-complete-guide-to-authentication-in-angular-with-akita-dc1b343f7e71
+
+ Logger.getInstance().log("genCSVReport :: GRAdsAcctAction : Cannot close bos", Logger.ERROR, e);
+
+Delete
+angular-login-hide-navbar-ramesh-1
+angular-login-hide-navbar-ramesh-2
+
+git config --global http.sslVerify false
+For Clone, use  **********
+https://stackblitz.com/github/melcor76/global-error-handling
+
+good - Checkin
+angular-login-navbar-rame-1
+good
+angular-login-navbar-rame-2
+
+
+Delete
+angular-login-navbar-rame-3
+
+Good - Completer app for NaveBar - Login /logout
+angular-login-navbar-rame-4
+
+working but - routers are working
+angular-login-navbar-rame-5
+
+angular-login-navbar-rame-6
+
+working
+angular-login-navbar-rame-7
+
+-- future module
+ng generate module admin --routing
+
+ng g component moduleName/componentName
+ng g component admin/admin
+
+ng generate module product --routing
+ng g component product/product
+ng g component product/line
+
+ng g component pos/item
+
+ng generate module inventory --routing
+
+ng g component inventory/inventoryHome
+ng g component inventory/stockEntry
+ng g component inventory/products
+ng g component inventory/categories
+
+ng generate module pos --routing
+ng g component pos/pos
+ng g component pos/posLine
+
+ng generate module user --routing
+ng g component user/profile
+ng g component user/logout
+ng g component user/viewUser
+
+ng generate module component --routing
+ng g component component/logo
+
+ng g component shared/logo
+ng g component core/logout
+
+ng generate module core --routing
+
+ng generate module dashboard --routing
+ng g component dashboard/dashboardHome
+
+ng generate module manager --routing
+ng g component manager/managerHome
+ng g component manager/receiptLookup
+ng g component manager/userManagement
+ng g component manager/userTable
+
+ng g component pos/items
+ng g component pos/personalDetails
+
+ ng g service my-data
+  ng c component parent
+  ng c component sibling
+  
+  ng generate component pos/parent
+  ng generate component pos/sibling
+  ng generate component pos/stock-status
+   ng generate component pos/line
+   
+   ng generate component pos/members
+   ng generate component pos/members/members-list
+   ng generate component pos/members/members-search
+  
+  ng g class hero.model
+  ng generate class member --type=model
+  
+
+For Debugging
+https://developer.ibm.com/tutorials/wa-load-feature-modules-in-angular4/
+https://stackblitz.com/edit/angular-feature-modules-final-example?file=app%2Fheroes%2Fheroes-routing.module.ts
+
+
+venkat/testtesttest  user/testtesttest  manager/testtesttest  clerk/testtesttest  cashier/testtesttest
+
+Angular - Faq's
+https://github.com/khan4019/angular-interview-questions
+
+Lazy loading and future module
+**
+https://pusher.com/tutorials/lazy-loading-angular-7
+
+https://github.com/anihalaney/rwa-trivia
+
+https://blog.bitsrc.io/boost-angulars-performance-by-lazy-loading-your-modules-ca7abd1e2304
+
+https://www.concretepage.com/angular/angular-canload-guard-example
+
+https://codecraft.tv/courses/angular/routing/router-guards/
+
+https://duncanhunter.gitbook.io/enterprise-angular-applications-with-ngrx-and-nx/9-route-guards-and-products-lib
+
+https://stackblitz.com/github/codecraft-tv/angular-course/tree/current/12.routing/6.router-guards/code
+
+****************
+https://www.9lessons.info/search/label/angular%202
+https://www.9lessons.info/2018/09/angular-lazyload-routing-route-guards.html
+C:\Development\workspace_Angular\angular-routing
+**************
+
+https://www.concretepage.com/angular/angular-canload-guard-example
+C:\Development\workspace_Angular\angular-feature-modules-routed
+
+https://github.com/saigowthamr/Angular-Lazy-loading
+https://medium.com/angular-in-depth/angular-routing-reusing-common-layout-for-pages-from-different-modules-440a23f86b57
+https://stackblitz.com/edit/angular-feature-modules-final-example?file=app%2Fdashboard%2Fdashboard.module.ts
+
+***********
+https://www.truecodex.com/course/angular-project-training/login-and-logout-using-web-api-with-token-based-authentication-angular
+https://medium.com/parkbee/how-to-use-modules-to-route-and-authorise-users-in-angular-813b5d7ec415
+https://github.com/gothinkster/angular-realworld-example-app
+********************
+
+Logo Components
+https://www.9lessons.info/2018/09/angular-lazyload-routing-route-guards.html
+https://github.com/srinivastamada/angular-routing/tree/master/src/app/components
+
+**** Real World --
+https://github.com/gothinkster/angular-realworld-example-app
+************
+https://github.com/zaarheed/angular6-starter-multi-module/tree/master/src/app/shared
+
+lazy loading - debugging
+
+https://blog.bitsrc.io/boost-angulars-performance-by-lazy-loading-your-modules-ca7abd1e2304
+
+
+https://www1.incometaxindiaefiling.gov.in/e-FilingGS/Services/LinkAadhaarHome.html?lang=eng
+
+Sukanya PaN
+AKLPK5080H
+345279481041
+
+Ramesh
+AFIPC3444H
+403176555955
+
+
+https://github.com/angular/angular/issues/10646
+
+1. Route Resolver
+2. Manager Details
+3. User details with backend data
+4. Product / product details
+5. Git Checkins
+6. New App with Left Menu
+
+7. links disable with role
+
+---------
+https://github.com/duluca/lemon-mart/wiki/Mock-Ups
+https://github.com/duluca/lemon-mart/wiki/Entity-Model
+
+http://localhost:3000/v1/users?search=&offset=0&limit=5
+
+{"total":1,"items":[{"id":"Sample text","email":"Sample text","name":{"first":"Sample text","middle":"Sample text","last":"Sample text"},"picture":"Sample text","role":"clerk","userStatus":true,"lastModified":"2020-01-05","lastModifiedBy":"Sample text"}]}
+
+
+http://localhost:3000/v1/user/Sample%20text
+
+{"id":"Sample text","email":"Sample text","name":{"first":"Sample text","middle":"Sample text","last":"Sample text"},"picture":"Sample text","role":"clerk","userStatus":true,"lastModified":"2020-01-05","lastModifiedBy":"Sample text"}
+
+
+ const defaultUser = new User({
+    email: 'duluca@gmail.com',
+    name: { first: 'Doguhan', last: 'Uluca' },
+    picture: 'https://secure.gravatar.com/avatar/7cbaa9afb5ca78d97f3c689f8ce6c985',
+    role: Role.Manager,
+    dateOfBirth: new Date(1980, 1, 1),
+    userStatus: true,
+    level: 2,
+    address: {
+      line1: '101 Sesame St.',
+      city: 'Bethesda',
+      state: 'Maryland',
+      zip: '20810',
+    },
+    phones: [
+      {
+        type: PhoneType.Mobile,
+        digits: '5555550717',
+      },
+    ],
+	
+
+
+http://localhost:8080/api/user/getUser/managerId
+http://localhost:8080/api/auth/signin
+
+C:\Development\workspace_practice\java\2\SpringBootJwtAuthentication
+
+C:\Development\workspace_practice\Backup\Backup_Jan-05-2020-orginalCode
+
+Before making changes with WSadmin code
+
+
+New folder
+C:\Development\workspace_practice\java\2\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\auth
+C:\Development\workspace_practice\java\2\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\auth\jwt
+C:\Development\workspace_practice\java\2\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\common
+C:\Development\workspace_practice\java\2\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\exceptions
+C:\Development\workspace_practice\java\2\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\model\token
+C:\Development\workspace_practice\java\2\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\model\security
+C:\Development\workspace_practice\java\2\SpringBootJwtAuthentication\src\main\java\com\grokonez\jwtauthentication\security\jwt\extractor
+
+
+package com.grokonez.jwtauthentication.auth.jwt;
+
+Chakraborty lpsita
+
+
+ return next.handle(request)
+               .pipe(
+                 catchError( (error: HttpErrorResponse) => {   
+                    let errMsg = '';
+                    // Client Side Error
+                    if (error.error instanceof ErrorEvent) {		
+                      errMsg = `Error: ${error.error.message}`;
+                    } 
+                    else {  // Server Side Error
+                      errMsg = `Error Code: ${error.status},  Message: ${error.message}`;
+                    }
+                    // return an observable
+                    return throwError(errMsg);
+                  })
+               )
+  }
+
+
+@Injectable()
+export class GlobalErrorHandler implements ErrorHandler {
+
+  constructor(private injector: Injector) { }
+  
+  handleError(error: Error | HttpErrorResponse) {
+    const errorService = this.injector.get(ErrorService);
+    const logger = this.injector.get(LoggingService);
+    const notifier = this.injector.get(NotificationService);
+
+    let message;
+    let stackTrace;
+    if (error instanceof HttpErrorResponse) {
+      // Server error
+      message = errorService.getServerErrorMessage(error);
+      //stackTrace = errorService.getServerErrorStackTrace(error);
+      notifier.showError(message);
+    } else {
+      // Client Error
+      message = errorService.getClientErrorMessage(error);
+      notifier.showError(message);
+    }
+    // Always log errors
+    logger.logError(message, stackTrace);
+    console.error(error);
+  }
+}
+--
+
+
+Working with @ViewChildren is similar to @ViewChild , but the difference between the two is @ViewChildren provides a list of element references rather than returning a single reference. It is used to reference multiple elements. 
+
+Most of the times when we need to change the behavior or appearance of an element in our template from our component class (i.e. from TS file). we require a reference variable of that element. For this, in View (HTML) we can use template reference variable, but how can we get this variable into our component class?
+
+For this, we can either use @ViewChild or @ViewChildren.
+
+@ViewChild() provides the instance of another component or directive in a parent component and then parent component can access the methods and properties of that component or directive. In this way, by using @ViewChild() a component can communicate with another component or a directive. But if we want to access multiple child references then we have to use @ViewChildren.
+
+You can use ViewChild if you need to query one element from the DOM and ViewChildren for multiple elements.
+
+https://stackblitz.com/edit/angular-8-viewchild-example
+
+https://stackblitz.com/edit/angular-8-viewchildren-example
+
+@Component({
+  selector: 'hello',
+  template: `<h1>Hello {{name}}!</h1>`,
+  styles: [`h1 { font-family: Lato; }`]
+})
+export class HelloComponent  {
+  @Input() name: string;
+}
+
+
+<hello name="{{ name }}" ></hello>
+
+
+export class AppComponent implements AfterViewInit {
+  name = 'Angular';
+  @ViewChild(HelloComponent, {static: false}) hello: HelloComponent;
+
+  @ViewChild('pRef', {static: false}) pRef: ElementRef;
+
+    ngAfterViewInit() {
+    console.log('Hello ', this.hello.name); 
+    console.log(this.pRef.nativeElement.innerHTML); 
+    this.pRef.nativeElement.innerHTML = "DOM updated succesfully!!!"; 
+  }
+}
+
+
+
+ "@angular/flex-layout": "^7.0.0-beta.24",
+ 
+ 

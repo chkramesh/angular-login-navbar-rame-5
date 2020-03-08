@@ -1,0 +1,1065 @@
+# What is pipe for in rxJS
+
+RxJS pipe is used to combine functional operators into a chain.
+
+pipe will be accessed using Observable.pipe. To use standalone pipe, we can also import it.
+import { pipe } from 'rxjs'; 
+
+1. Observable.pipe with filter, map and scan.
+
+getNumbers(): Observable<number> {
+   return of(1, 2, 3, 4, 5, 6, 7);
+} 1. Find the code to use pipe with filter operator.
+calculateNumbers() {
+  this.bookService.getNumbers().pipe(
+    filter(n => n % 2 === 1)
+  )
+  .subscribe(result => console.log(result));
+} Output will be 1,3,5,7.
+
+2. pipe with mergeMap
+Find the code snippet to use pipe with mergeMap operator.
+getAllFavBooks() {
+   this.bookService.getFavBookFromStore(101).pipe(
+     mergeMap(book => { 
+      let category = book.category;
+      return this.bookService.getBooksByCategoryFromStore(category);
+     })
+   ).subscribe(books => {
+     this.allFavBooks = books;
+   });
+} 
+
+
+https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
+
+# TypeScript: Remove duplicate item in array
+
+
+# What is the proper use of an EventEmitter?
+https://angular.io/api/core/EventEmitter
+
+1. EventEmitter is really an Angular abstraction, and should be used pretty much only for emitting custom Events in components. Otherwise, just use Rx as if it was any other library. 
+2. No, don't subscribe manually to them, don't use them in services.
+
+# Event Emitter vs Service vs Subject( Cross component communication in Angular 6)?
+*********
+https://medium.com/@manivel45/event-emitter-vs-subject-cross-component-communication-8934376605e1
+****
+
+1. Event-emitter is imported from “@anguar/core” package. It is used in directives and components to emit custom events synchronously or
+   asynchronously and register handlers for those events by subscribing to an instance. 
+
+2. It uses ‘@Output’ and ‘@Input’ decorators.
+	Emit the event.
+	@Output() postData = new EventEmitter()
+	
+	listen to the event
+	@Input() listPost = [];
+
+3. Service :- Services are a great way to share information among classes that don’t know each other.
+
+4. Subject :- A subject is imported from “rxjs” package. A subject is an active listener. it triggers with next().
+   A subject is a special kind of observable. It maintains the stream of data which is maintained actively. A subject is an observer and observable.
+
+5. Event emitter is built on top of the subject. A subject is better to use in case of cross-component communication.
+
+6. in API, export class EventEmitter<T> extends Subject<T> {....}
+
+# Angular 5 Injector - How to inject string? Withour service?
+
+import { Http } from '@angular/http';
+import { Inject, Injectable } from '@angular/core';
+
+@Injectable()
+export class Service {
+  constructor(private http: Http, @Inject('TEMPLATE') template: string) {
+      console.log(template);
+  }
+}
+
+app.module.ts
+
+export let serviceFactory = (http: Http, template: string) => {
+  return new Service(http, template);
+}
+
+export let serviceProvider = {
+  provide: Service,
+  useFactory: serviceFactory,
+  deps: [Http, [new Inject('TEMPLATE')]]
+};
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    HttpModule
+  ],
+  declarations: [ AppComponent ],
+  providers: [
+    { provide: 'TEMPLATE', useValue: 'test' },
+    serviceProvider,
+  ],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+
+
+
+# what tyope of header need send for Rest Security? Autharization
+
+# How two components will be refresh with Selectbox change?
+# How default module / default componet will be loaded on first page?
+
+# Angular 7 features?
+
+
+# angular typechead on chage?
+
+# How to make an Autocomplete Search with RxJS?
+# Building a safe autocomplete operator in RxJS?  using debounceTime() and RxJS operator switchMap will do just that.
+https://stackblitz.com/edit/angular-material-autocomplete-async2?file=src%2Fapp%2Fapp.component.ts
+https://blog.strongbrew.io/building-a-safe-autocomplete-operator-with-rxjs/
+https://stackblitz.com/edit/safe-switchmap?file=src%2Fapp%2Fapp.component.ts
+https://medium.com/@rachel.poulos/wreck-the-web-with-observables-how-to-make-an-autocomplete-search-with-rxjs-bd588ad91b1b
+https://www.credera.com/blog/technology-solutions/using-rxjs-switchmap-angular-7-reactive-forms-cancel-pending-requests/
+
+#
+https://angular.io/guide/singleton-services
+https://stackblitz.com/angular/emvjxdxdmek?file=src%2Fapp%2Fapp.component.ts
+
+# What is Injectable root ? It is Angular 6 new feature.
+# Using providedIn
+Beginning with Angular 6.0, the preferred way to create a singleton service is to set providedIn to root on the service's @Injectable() decorator. This tells Angular to provide the service in the application root.
+
+src/app/user.service.ts
+content_copy
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class UserService {
+}
+
+NgModule providers array prior to 6.0
+In apps built with Angular versions prior to 6.0, services are registered NgModule providers arrays as follows:
+
+content_copy
+@NgModule({
+  ...
+  providers: [UserService],
+  ...
+})
+If this NgModule were the root AppModule, the UserService would be a singleton and available throughout the app.
+
+# Using multiple instances of the same service?
+
+# Interpolation Vs Property Binding in Angular2 ? Why two of them?
+
+1. Data binding help us coordinate communication between a component and its view template. Data binding consist of One-Way Data-Binding and Two-Way Data-Binding
+
+2.
+Property Binding: to set an element property to a non-string data value, you must use property binding.
+
+<button [disabled]='isDisabled'>Try Me</button>          </div>`
+
+3. Interpolation works only for strings.
+
+
+# @Inject vs @Injectable
+
+The @Injectable decorator aims to actually set some metadata about which dependencies to inject into the constructor of the associated class. It's a class decorator that doesn't require parameters. Without this decorator no dependency will be injected...
+
+@Injectable()
+export class SomeService {
+  constructor(private http:Http) {
+  }
+}
+
+is a manual mechanism for letting Angular know that a parameter must be injected.
+The @Inject() Decorator must be used at the level of constructor parameters to specify metadata regarding elements to inject.
+The @Inject decorator must be used at the level of constructor parameters to specify metadata regarding elements to inject. Without it, the type of parameters is used (obj:SomeType is equivalent to @Inject(SomeType) obj).
+
+@Injectable()
+export class SomeService {
+  constructor(@Inject(Http) private http:Http, @Inject('sometoken') obj) {
+  }
+}
+
+# Injecting a service into another service in Angular ?
+1. you have a Service1 and Service2 in an regular Angular application.
+2. Let’s say now that this Service2 depends on Service1.
+
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class Service1 {
+
+  constructor() { }
+
+  doSomethingFromService1(){
+    console.log('service 1 just did something');
+  }
+
+}
+
+import { Service1 } from './service1.service';
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class Service2 {
+
+  constructor(private service1: Service1) { }
+
+  do(){
+    this.service1.doSomethingFromService1();
+    console.log('after service 1 function');
+  }
+}
+
+We must tell Angular to instantiate Service1 to be available (instatiated) before Service2.
+
+app.module.ts.
+
+ imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [Service1]
+  
+ Now, Service1 is a singleton provider to the entire application and it is already instantiated. 
+
+ In Component,
+ 
+ import { Service2 } from './service2.service';
+ import { Component } from '@angular/core';
+ 
+ @Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css'],
+   providers: [Service2]
+ })
+ export class AppComponent {
+   title = 'app works!';
+ 
+   constructor(private service2: Service2){}
+}
+
+One more example, Service1 is used by the ChildComponent and Service2 by Service1
+
+In component
+
+import {Service1} from './app.service1';
+import {Service2} from './app.service2';
+
+@Component({
+    selector: 'child', 
+    template: `
+      {{data | json}}<br/>
+      <a href="#" (click)="getData()">Get data</a>
+    `,
+    providers: [ Service1 ]
+})
+export class ChildComponent {
+  constructor(service1:Service1) {
+    this.service1 = service1;
+  }
+
+  getData() {
+    this.data = this.service1.getData();
+	  return false; 
+  }
+}
+
+//Service1
+import {Service2} from './app.service2';
+
+@Injectable()
+export class Service1 {
+  constructor(service2:Service2) {
+    this.service2 = service2;
+  }
+
+  getData() {
+    return this.service2.getData();
+  }
+}
+
+//Service2
+import {Injectable} from 'angular2/core';
+
+@Injectable()
+export class Service2 {
+
+  getData() {
+    return [
+      { message: 'message1' },
+      { message: 'message2' }
+    ];
+  }
+}
+
+
+# How dependency Injections works?
+
+Thus, whenever Angular needs to instantiate a service class, it would do a lookup on the DI framework to resolve that dependency.
+By default, the DI would search for a provider starting from the component's local injector and then bubble up through the
+injector tree; this continues till it reaches the root injector.
+
+If we do not have any provider all the way up to the root injector, the Angular DI framework would then throw an error.
+ 
+@NgModule({
+  imports:      [ BrowserModule],
+  declarations: [ AppComponent],
+  bootstrap:    [ AppComponent],
+  providers:    [LoggingService]
+})
+
+It is mostly recommended to have any service available application-wide by using either @Injectable({providedIn: 'root'})
+OR by adding to providers of AppModule, unless there is a strong reason to add it only in some component or in some lazy loaded module.
+
+Services in Child Components
+
+1. If a service is injected in AppModule, the same instance of the service is available application-wide.
+2. If a service is injected in AppComponent, the same instance of the service is available to AppComponent and all it's child components.
+It is important to note that instances do not propagate up, they only go down to the child components.
+
+3. If a service is injected in any other component, the same instance of the service is available for that component and all it's child components.
+
+# Services and Modules ? how the module loading strategy has an impact in terms of services ?
+
+1. Eagerly loaded modules are imported into the root AppModule.
+2. Lazy loaded modules, on the other hand, are loaded whenever they are requested, e.g. if we have a module called ShoppingModule,
+   we can control the way it is bundled by turning it into a lazy loaded module. Thus, only when the user visits the Shopping page
+   would that module get downloaded, which reduces the initial bundle size a lot.
+   
+3. now, We'll look at different examples of providing services in an eagerly loaded module vs. lazy loaded module and see the different behaviors.
+
+3.1 CoreModule which is an eagerly loaded module, while ShoppingListModule is lazy loaded.
+
+3.2  if the service is provided in both AppModule and any lazy loaded module, the service would be available application-wide, but the
+     lazy loaded module will get its own instance of the service.
+     
+3.3 Services can truly be useful in making our component code very lean and also provide a clear separation of concerns. However,
+   it can also introduce hard to debug bugs if they are provided in shared modules when using lazy loading.
+   
+3.4 It is mostly recommended to have any service available application-wide by using either @Injectable({providedIn: 'root'}) OR by adding
+    to providers of AppModule, unless there is a strong reason to add it only in some component or in some lazy loaded module.
+
+# providedIn vs providers:[ ]?
+
+1. The Old Way™ of doing DI in Angular — providers: []
+2. The New Way™ of doing DI in Angular — providedIn: 'root' | SomeModule
+   (The official name is “Tree-shakable providers” )
+3. Our components and services are classes. Every class has a special function called constructor which is called when we want to create an object (instance) of that class to be used in our application.
+
+4. Using providers: [] property can lead to three different scenarios based on specific circumstances…
+4.1 We’re specifying providers: [] in the @NgModule decorator of an eager-ly imported module.
+
+    In this case, service will be registered as a global singleton. Service will be provided as a singleton even
+    if it is included in the providers:[] of multiple eager modules. Only one instance will be created by the injector
+    and this is because they will all end up registered with the root level injector.
+
+4.2 We’re specifying providers: [] in the @NgModule decorator of a lazy loaded module.
+    Instance of the service provided in the lazy module will be created on the child injector (of the lazy module) when initialized
+    later during the application run-time. Injecting such a service into the eager part would lead to No provider for MyService! error.
+
+4.3 We’re specifying providers: [] in the @Component or @Directive decorator (aka declarables).
+    
+    In this case, the service is not a singleton and we get a new instance of the provided service every time we use component in the
+    template of another component. It also means that the service instance will be destroyed together with the component.
+    Providing service on the component level leads to multiple service instances ( one per component ).
+    
+5    
+5.1 We are using providedIn: 'root'.
+    The main benefit of this solution is that the services will be bundled only if they are really used. “Used” stands for being injected into some component or other service
+5.2 We are using providedIn: EagerlyImportedModule
+5.3 We are using providedIn: LazyLoadedModule.
+
+    This solution is great because it helps us to prevent usage of our services outside of the desired module. Keeping dependency graph
+    in check can be useful when developing huge applications when unconstrained possibility to inject everything everywhere can lead to
+    a huge mess which may be impossible to untangle!
+
+https://medium.com/@tomastrajan/total-guide-to-angular-6-dependency-injection-providedin-vs-providers-85b7a347b59f
+
+6 Use providedIn: 'root' for services which should be available in whole application as singletons
+7 Never use providedIn: EagerlyImportedModule, you don’t need it and if there is some super exceptional use case then go with the providers: [] instead
+8 Use providedIn: LazyServiceModule to prevent service injection in the eagerly imported part of the application or even better use providers: [LazyService] in the LazyModule.
+Which is simpler to implement…
+
+Code:-
+
+in app.module or core.module
+
+const routes: Routes = [       
+        { path: 'dashboard', loadChildren: '../dashboard/dashboard.module#DashboardModule', canActivate: [AuthGuard] },
+];
+
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+
+in lazy load module  (DashBoadModule)
+
+const routes: Routes = [  
+  { path: 'dashboardhome', component: DashboardHomeComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+
+we used instead of forRoot we are using forChild.
+
+# What's new in Angular 6?
+
+1. Tree-shakeable providers, @Injectable({  providedIn: 'root'}).
+2. Angular 6 now uses RxJS 6 internally, and requires you to update your application also.
+3. Animations
+4. Angular Elements.
+5. ElementRef<T>
+When you want to grab a reference to an element in your template, you can use @ViewChild or @ViewChildren or even inject the host ElementRef directly.
+
+#??
+We need to explicitly tell Angular what we want injected for the otherService parameter so we use the @Inject decorator like so:
+
+import { Inject } from '@angular/core';
+.
+.
+.
+@Injectable()
+class SimpleService {
+  otherService: OtherService;
+
+  constructor(@Inject(OtherService) otherService: OtherService) {
+      this.otherService = otherService;
+  };
+}
+
+Angular tries to construct the class it gets the instance of OtherService passed in from the DI framework.
+
+# ng-template?
+
+the ng-template directive represents an Angular template: this means that the content of this tag will contain part of a template,
+that can be then be composed together with other templates in order to form the final component template.
+These template elements only work in the presence of structural directives.
+
+<div class="lessons-list" *ngIf="lessons else loading">
+  ... 
+</div>
+
+<ng-template #loading>
+    <div>Loading...</div>
+</ng-template>
+
+# The ng-container directive
+The Angular <ng-container> is a grouping element that doesn't interfere with styles or layout because Angular doesn't put it in the DOM.
+In order to avoid having to create that extra div, we can instead use ng-container directive:
+
+
+<ng-container *ngIf="lessons">
+    <div class="lesson" *ngFor="let lesson of lessons">
+        <div class="lesson-detail">
+            {{lesson | json}}
+        </div>
+    </div>
+</ng-container>
+
+Dynamic Template Creation with the ngTemplateOutlet directive
+
+ngTemplateOutlet is used for two scenarios, to insert a common template in various sections of a view irrespective of loops or condition and to make a highly configured component.
+
+Template reuse
+
+We can also take the template itself and instantiate it anywhere on the page, using the ngTemplateOutlet directive:
+
+
+<ng-container *ngTemplateOutlet="loading"></ng-container>
+
+# ng-content  vs view-template?
+# How to show errores?
+# Subject vs b subject?
+# How did you use Subject in your project?
+# How do you handle timout error?
+# how use one component into other?
+# mergemap vs map ?
+
+# appModule vs component?
+
+# Angular Directivies?
+# CSS box model?
+
+The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+
+div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+# Angular & RxJS: Detecting Memory Leaks
+
+# Lifecycle Hooks
+A component has a lifecycle managed by Angular.
+
+Angular creates and renders components along with their children, checks when their data-bound properties change, and destroys them before removing them from the DOM.
+
+Angular offers lifecycle hooks that provide visibility into these key life moments and the ability to act when they occur.
+
+A directive has the same set of lifecycle hooks.
+
+ngOnChanges() - Called before ngOnInit() and whenever one or more data-bound input properties change.
+ngOnInit()
+ngDoCheck()
+--
+--
+--
+--
+ngOnDestroy()
+
+https://angular.io/guide/component-interaction
+
+
+1. What is the technology stack used in last project
+2. Used groovy?
+3. If asked to build an application from scratch, what technology stack will you use and why.?
+
+   
+5. What is new in Java 9 and 11
+
+1. Java 9, Project Jigsaw
+The flagship feature of Java 9 was Jigsaw project that introduced modularity to monolithic Java SE ecosystem. 
+2. Default garbage collector
+3. Java 9, Private methods in interfaces
+4. Java 9 comes with new methods in Optional class.
+5. Immutable Collection Factory
+Java 9 came with static methods on the List, Set and Map interfaces for creating unmodifiable instances of those collections. Till now, to create immutable collection, programmers had to construct it, store it in a local variable, fill with add method and wrap into a unmodifiable collection.
+
+6. Java 11
+Local-Variable Syntax for Lambda Parameters
+Currently when we want to specify lambda parameters types, we need to do this explicitly and can’t use var keyword introduced in Java 10.
+
+6. Benefits of using lamda expressions. ?
+
+Advantages of lambda expressions
+
+One more - unlike anonymous classes, lambdas do NOT create a new scope, they share the same scope as the enclosing block/environment.
+
+1. It reduces the lines of code.
+2. It supports sequential and parallel execution by passing behavior in methods with collection stream API.
+3. Using Stream API and lambda expression we can achieve higher efficiency (parallel execution) in the case of bulk operations on collections.
+4.  removal of duplicated code
+
+7. Have you used docker and benefits of it.
+
+Docker container benefits
+Containers work a little like VMs, but in a far more specific and granular way. They isolate a single application and its dependencies—all of the external software
+libraries the app requires to run—both from the underlying operating system and from other containers. All of the containerized apps share a single,
+common operating system (either Linux or Windows),
+
+Docker enables faster software delivery cycles
+Docker containers make it easy to put new versions of software, with new business features, into production quickly—and to quickly roll back to a previous
+version if you need to. They also make it easier to implement strategies like blue/green deployments.
+
+# What is Stream?
+Stream represents a sequence of objects from a source, which supports aggregate operations. Following are the characteristics of a Stream -
+
+Sequence of elements - A stream provides a set of elements of specific type in a sequential manner. A stream gets/computes elements on demand. It never stores the elements.
+
+Source - Stream takes Collections, Arrays, or I/O resources as input source.
+
+Aggregate operations - Stream supports aggregate operations like filter, map, limit, reduce, find, match, and so on.
+
+8. Writing simple table joins using SQL and fetch data.?? SQL
+
+www.miaxoptions.com. 
+9. Writing junit test cases.
+
+
+10. Difference between rest and microservices
+
+REST (Representational State Transfer) is a HTTP-based web service for communication between applications.
+So, REST actually facilitates microservices working together, as microservices is more about architecture whereas 
+a RESTful API focuses more on how to expose those microservices while keeping them decoupled.
+
+
+Microservices
+
+This is the more recent term; it promotes implementing applications as a set of simple independently deployable services.
+This contrasts with the classic approach of SOA architectures as a set of quite complex services used to build complex systems,
+tipically involving an enterprise service bus. However, it is important to note that although typically SOA gets associated with such systems,
+it is a broader term and indeed, microservices are also a subset of SOA.
+
+Micro Service is independently deployable service modeled around a business domain. It is a method of breaking large software applications
+into loosely coupled modules, in which each service runs a unique process and communicates through APIs.
+It can be developed using messaging or event-driven APIs, or using non-HTTP backed RPC mechanisms.
+
+Micro Services are designed to cope with failure and breakdowns of large applications. Since multiple unique services are
+communicating together, it may happen that a particular service fails, but the overall larger applications remain
+unaffected by the failure of a single module.
+
+REST is a way to implement Microservices. You can implement Microservices in multiple ways.
+
+REST over HTTP is the most popular way to implement Microservices nowadays.
+
+You can use REST for other purposes as well. REST is used in web apps as well as in API design. Many MVC applications also use REST to serve business data.
+
+Microservices is an architecture style to build large scale applications that can be scaled up independently.
+
+In Microservices we follow certain design patterns to make it loosely coupled.
+
+
+
+11. How to define the end tag using spring to expose the rest api
+
+12. Difference between JSP based application and modern java script applications.
+
+JSP requires Java programming language to be used along with HTML to write Java code inside scriptlets to display
+HTML content with real-time dynamic data whereas Javascript does not need any Servlet containers to deploy the web pages.
+JavaScript provides different options to develop web pages.
+
+
+13. What is the approach to migrate to the modern tech stack.
+
+https://www.railscarma.com/blog/management/tech-stack-migration-to-modern-framework/
+
+4. If given a requirement : providing 3 different types of file csv, json and xml from upstream .. 
+   there is no front end.. how will you allow a design from unix to hold the data and allow search of different search fields.
+   
+   Unix Domain Socket
+   
+   A shell needs to accomodate for both, but maybe we really just need better command line tools for simple hierarchial processing of arbitrary text file formats 
+   (ad-hoc configs, CSV, INI, JSON, YAML, XML, etc.).
+   
+   Powershell does two things right: it uses structured output, and it separates producing the data from rendering the data.
+   
+    two programs, awk and sed,
+    Parse a CVS file using awk
+Awk use the field separator called 
+
+Reading file, using, grep "^[^,]\+,[^,]\+,12," file.csv
+
+https://www.cyberciti.biz/faq/linux-unix-appleosx-bsd-shell-parse-text-file/
+https://www.cyberciti.biz/faq/unix-linux-bash-read-comma-separated-cvsfile/
+http://www.theunixschool.com/2012/05/shell-read-text-or-csv-file-and-extract.html
+
+when you have csv files, where you have distinct delimiters such as commas, use the splitting on field/delimiters approach,
+not regular expression. Tools to break strings up like awk, Perl/Python does the job easily for you (Perl/Python has support for csv modules for more complex csv parsing)
+
+Use Python's JSON support instead of using awk!
+
+PREMIER UROLOGY GROUP LLC, 10 PARSONAGE RD EDISON, NJ 08837 (732) 494-9400
+SRINIVAS MENDU M.D.732) 274-1274
+
+----------------------
+
+
+# I prefer a BehaviorSubject.
+
+1. It will always return the current value on subscription - there is no need to call onnext
+2. It has a getValue() function to extract the last value as raw data.
+3. It ensures that the component always receives the most recent data.
+
+# Sharing Data with a Service
+https://angularfirebase.com/lessons/sharing-data-between-angular-components-four-methods/
+https://www.intersysconsulting.com/blog/angular-components/
+https://stackblitz.com/edit/shared-service-shopping-cart?file=src%2Fapp%2Fcomponents%2Fproduct-list.component.ts
+https://stackblitz.com/edit/angular2-communicating-between-components?file=app%2Fapp.component.ts
+https://stackblitz.com/edit/angular-6-communicating-between-components
+
+1. In the service, we create a private BehaviorSubject that will hold the current value of the message.
+2. We define a currentMessage variable handle this data stream as an observable that will be used by the components.
+3. Lastly, we create function that calls next on the BehaviorSubject to change its value.
+
+@Injectable()
+export class DataService {
+
+  private messageSource = new BehaviorSubject('default message');
+  currentMessage = this.messageSource.asObservable();
+
+  constructor() { }
+
+  changeMessage(message: string) {
+    this.messageSource.next(message)
+  }
+
+}
+
+https://www.paypal.melakshmi309/
+
+# RxJS is mostly useful for its operators
+
+1. Operators are functions. There are two kinds of operators:
+2. Pipeable Operators are the kind that can be piped to Observables
+3. These include, filter(...), and mergeMap(...). When called, they do not change the existing Observable instance. Instead, they return a new Observable, whose subscription logic is based on the first Observable.
+4. map() :- This is an operator defined in a pipe inside which you can modify the content of emitted values from one observable to form another new observable.
+
+const observable1 = of('my name is lotanna');
+  observable1.pipe(
+    map(data => data.toUpperCase())
+  ).subscribe((data) => console.log(data));
+}}
+
+
+1. Operators are an important part of RxJS. An operator is a pure function that takes in observable as input and the output is also an observable.
+2. To work with operators we need a pipe() method.
+
+Example of using pipe(), Systex
+let obs = of(1,2,3); // an observable
+obs.pipe(
+   operator1(),
+   operator2(),
+   operator3(),
+   operator3(),
+)
+
+Example
+
+let test1 = of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+let case1 = test1.pipe(
+   filter(x => x % 2 === 0),
+   reduce((acc, one) => acc + one, 0)
+)
+case1.subscribe(x => console.log(x));
+
+# What is Multicasting?
+
+# ForkJoin:-  Multiple HTTP Requests, ‘forkJoin’ is the easiest way, when you need to wait for multiple HTTP requests to be resolved
+
+# switchMap :- Using switchMap in Search Operation
+
+Using switchMap with debounceTime:
+debounceTime delays the emit of new value from source Observable for the given time after an emit from source Observable has taken place.
+
+#RxJS mergeMap 
+operator projects each source value to an Observable and finally they are merged into output Observable using RxJS mergeAll operator.
+
+
+addMoreBooks() {
+ let book1 = new Book(++this.id, "Book-"+ this.id);
+ let book2 = new Book(++this.id, "Book-"+ this.id);
+ let book3 = new Book(++this.id, "Book-"+ this.id);
+
+ of(book1, book2, book3).pipe(
+	mergeMap(book => {
+	  delay(2000);
+	  return this.bookService.addBook(book);
+	})
+ ).subscribe(book=>{
+	console.log(book.id+":"+book.name);
+  });
+}
+
+In the above code, before addBook returns response for book1, source Observable will emit book2, and book3 to mergeMap.
+So the responses of all the three inner Observable will be merged as final Observable output of mergeMap.
+
+
+!!!!!!!!!!!!!!!!
+
+# @Input can't use everywhere. It can only use when passing values from parent component to a child component.
+
+
+# @ViewChild and @ViewChildren  decorator
+1. Using ViewChild in Angular to Access a Child Component, Directive or DOM Element
+
+2. @ViewChildren is similar to @ViewChild , but the difference between the two is @ViewChildren provides a list of element references rather than returning a single reference.
+It is used to reference multiple elements. We can then iterate the list of the element referenced by the variable
+
+# Angular 2 Directives & Components
+Angular 2, directives are split into the following 3 categories: 
+
+1. Component Directive :- Component directive is used to specify the HTML templates
+2. Structural Directive :- NgIf, NgFor, You can easily recognize it by an asterisk (*) symbol.
+                           <div *ngIf=”emp”> {{emp.name}} </div>
+3. Attribute Directive :- NgStyle, NgClass
+
+in Angular 2, Components are a type of Directive.
+
+
+#############################################
+
+# Operators
+Operators are observables that operate on a source observable. 
+
+The map() operator returns a new Observable
+
+
+Folder Structure
+https://www.agiratech.com/top-10-angular-best-practices/
+
+---------------------------------------
+Mat Table
+
+https://stackblitz.com/edit/angular-6-mat-table-editing?file=src%2Fapp%2Fapp.component.ts
+
+*****
+https://stackblitz.com/edit/angular-material-table-with-multi-queries
+https://stackblitz.com/edit/angular-material-datatable?file=app%2Ftable-selection-example.html
+https://stackblitz.com/edit/angular-mattable-templateform
+https://stackblitz.com/angular/dnbermjydavk?file=app%2Ftable-overview-example.ts
+https://stackblitz.com/edit/angular-material-table-multiple-filter?file=app%2Fapp.component.html
+
+https://stackblitz.com/edit/angular-material2-table
+https://stackblitz.com/edit/angular-paginated-material-datasource?file=src%2Fapp%2Fpaginated-datasource.ts
+
+
+mata Table With BechaviourSubject
+https://stackoverflow.com/questions/45004524/how-to-use-material2-data-table
+
+
+https://embed.plnkr.co/GfRj8bxsRjauoqxJil8C/
+
+
+dataChange: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+https://walkingtree.tech/data-handling-with-angular-7-and-material-virtual-scroll-and-pagination/
+
+https://ada.csse.rose-hulman.edu/RoseBuild/RoseBuildWebApp/commit/6240546ca9b2055e8b270a6ff88317abf107332a
+
+https://ada.csse.rose-hulman.edu/RoseBuild/RoseBuildWebApp
+
+-----------------------------------------
+
+-------------------------------------------
+# Sharing Data with a Service
+https://angularfirebase.com/lessons/sharing-data-between-angular-components-four-methods/
+https://www.intersysconsulting.com/blog/angular-components/
+https://stackblitz.com/edit/shared-service-shopping-cart?file=src%2Fapp%2Fcomponents%2Fproduct-list.component.ts
+https://stackblitz.com/edit/angular2-communicating-between-components?file=app%2Fapp.component.ts
+https://stackblitz.com/edit/angular-6-communicating-between-components
+
+https://dzone.com/articles/understanding-output-and-eventemitter-in-angular?edition=582291&utm_source=Daily%20Digest&utm_medium=email&utm_campaign=Daily%20Digest%202020-02-25
+
+// https://codehandbook.org/how-to-implement-auto-complete-in-angular-4/
+
+// https://stackoverflow.com/questions/46268259/clear-angular-material-autocomplete-after-selection
+// https://code-maze.com/angular-material-form-validation/
+
+// Ramesh StackBlitz
+https://stackblitz.com/edit/angular-material-table-with-multi-queries-nco2rz
+https://stackblitz.com/edit/angular-fkn3z8
+
+Flex Layout
+https://stackblitz.com/edit/stackoverflowcom-questions-41665737-angular-2-flex-layout-hei?file=src/app/app.component.html
+
+Nested
+https://stackblitz.com/edit/angular-nested-forms-cva
+
+ ************ Custome Validations *******************
+ https://medium.com/@zeljkoradic/custom-form-validators-in-angular-6-using-regular-expressions-d421a5655adf
+ *************
+ https://stackoverflow.com/questions/46667375/angular-form-validations-values-have-to-be-different-to-initial-values
+ https://stackblitz.com/edit/angular-rc452r
+ https://medium.com/@realTomaszKula/angular-cross-field-validation-d94e0d063b61
+ https://stackblitz.com/edit/ng-cross-validation
+ https://www.infragistics.com/community/blogs/b/infragistics/posts/how-to-do-conditional-validation-on-valuechanges-method-in-angular-reactive-forms-
+ 
+ https://medium.com/free-code-camp/validating-reactive-forms-with-default-and-custom-form-field-validators-in-angular-5586dc51c4ae
+ https://stackblitz.com/edit/angular-validation-summary
+ With getter
+ https://malcoded.com/posts/angular-reactive-form-validation/
+ 
+ **** with model ************
+ https://stackblitz.com/edit/angular-validation-summary
+ 
+ Invalid credentials or Token might have been expired! So please login again
+ 
+ ---------------  Oct/2019 ------------------------------------------
+ 
+ # BehaviorSubject
+ 
+ https://github.com/ReactiveX/rxjs/issues/4692
+ https://pillar-soft.com/2018/07/02/behavior-subjects-in-angular-6/
+ https://hassantariqblog.wordpress.com/2016/12/03/angular2-using-loaderspinner-as-angular-service-in-angular-2-application/
+ https://hassantariqblog.wordpress.com/2017/03/22/angular2-using-custom-loader-spinner-as-service-in-angular-2-application/
+ https://stackblitz.com/edit/angular-yadden
+ -----------------------------------------------------------------
+ 
+ 
+ // ******* How to use Gloabl *******
+ // https://stackblitz.com/edit/angular-x32any
+ // https://stackoverflow.com/questions/34986922/define-global-constants-in-angular-2
+ 
+ // ******** taking different file for DEV / INT and PROD*********
+ 
+ // https://blog.usejournal.com/how-to-map-rest-api-data-using-decorator-pattern-in-angular-6-94eb49ba16b1
+ 
+ // Angular HttpClient modify response in service
+ // https://stackoverflow.com/questions/47617169/angular-httpclient-modify-response-in-service
+ 
+ // MAT autocomplete ********************
+ // https://stackblitz.com/github/bithost-gmbh/ngx-mat-select-search-example
+ // https://stackblitz.com/edit/autocomplete-force-selection-tests-w2fqww?file=app%2Fapp.component.html
+ // https://stackblitz.com/edit/angular-material-autocomplete-async2?file=src%2Fapp%2Fin-memory-data.service.ts
+// https://stackblitz.com/edit/angular-material2-issue-wmgcaj
+-----------------------------------------------------------
+
+****** Angular Flex Layout **********
+https://stackblitz.com/edit/angular-flexlayouts-sample?file=src%2Fapp%2Fapp.component.html
+https://www.tutorialspoint.com/angular_material7/angular_material7_quick_guide.htm
+
+https://www.angularjswiki.com/flexlayout/basics/
+
+https://stackblitz.com/edit/angular-flex-layout-seed?file=app%2Fapp.component.ts
+https://stackblitz.com/edit/angular-material-card-horizontal?file=app%2Fapp.component.html
+https://stackblitz.com/edit/angular-material-card-shadow?file=app%2Fcard-fancy-example.html
+https://stackblitz.com/edit/expanding-card-singles-mat-card
+
+https://stackblitz.com/edit/flex-layout-grid-column-span?file=src%2Fapp%2Fgrid-column-span%2Fgrid-column-span.component.css
+https://stackblitz.com/edit/flex-layout-horizontal-grow-control?file=app%2Fapp.component.html
+-------------------------------------
+-------------Reusable component ------------
+
+https://medium.com/javascript-everyday/reusable-components-with-configurable-templates-in-angular-3c55741c97f3
+https://stackblitz.com/edit/angular-counter-with-template-refs
+
+https://netbasal.com/advanced-angular-implementing-a-reusable-autocomplete-component-9908c2f04f5
+https://stackblitz.com/edit/github-4zpkjw
+
+*** grid also
+https://dev.to/maurogarcia_19/3-reusable-components-with-angular-and-tailwindcss-45md
+https://github.com/mauro-codes/reusable-angular-tailwindcss-components
+
+https://www.itsolutionstuff.com/post/how-to-create-reusable-components-in-angular-8example.html
+
+
+reusable Modal Dialog component in Angular 8
+https://levelup.gitconnected.com/how-to-create-a-reusable-modal-dialog-component-in-angular-8-241cc738d260
+https://github.com/Ze1598/medium-articles/tree/master/Create%20a%20reusable%20Modal%20Dialog%20component%20in%20Angular%208/reusable-modal
+https://stackblitz.com/edit/ng-reusable-modal
+
+
+--------- Parent to Child to Parent ----------------------
+************
+https://fireship.io/lessons/sharing-data-between-angular-components-four-methods/--------------------
+
+Stock Component - DZone
+
+https://stackblitz.com/edit/inputoutputs?file=src%2Fapp%2Fapp.component.html
+-----------Search form  and Table------------
+
+https://dzone.com/articles/how-to-create-a-multi-field-data-filters-innbspang-1
+
+https://www.javainuse.com/spring/ang7-crud
+
+https://stackoverflow.com/questions/53052855/angular-reactive-form-pass-child-component-value-to-parent-component
+https://stackblitz.com/edit/formreset?file=src%2Fapp%2Finput%2Finput.component.ts
+https://www.google.com/search?rlz=1C1CHBF_enUS808US808&biw=1536&bih=750&sxsrf=ACYBGNSv-AT6RwJTrrT-dEAWUeEFll6-MA:1583119766015&q=pass+formcontrol+to+child+component&sa=X&ved=2ahUKEwjb8Kja7PrnAhWzl3IEHRhtA3E4ChDVAigGegQIChAH
+
+http://www.shanegibney.com/shanegibney/angular-4-pass-data-directly-from-parent-to-child-component/
+https://github.com/shanegibney/angular-data-parent-to-child-component/blob/master/src/app/child/child.component.html
+
+https://stackblitz.com/edit/angular-parent-child-interaction-vktloh?file=app%2Fapp.component.ts
+
+MDT
+DXCM
+
+way to get a reference to any component
+
+Hi, I already closed my TdAmeritrade account last year. I need a some proof for closed accounts. Would you please send me an email or letter for closed account?
+
+Thanks,
+
+Ramesh
+
+CMA-Edge 20X-79Y66
+
+---------------------
+Ctrl + Shift + F 
+
+CH c
+r-41012432
+00325-80000-00000-AAOEM
+45W
+Inspiron 5558
+Serial Number: 3Q1F162
+-------------------
+
+https://www.fieldglass.net/time_sheet_list.do
+chkram4sh / Gil
+
+RAME0701CHE
+
+2087.72
+2087.71
+2167.70
+2223.14
+
+8,566.27
+
+Here is Child care expenses for 2019. 
+ 
+STEM Academy (732) 243-9793
+1665 Oak Tree Rd suite 400Edison, NJ 08820
+TaxID: 47-1762308  Amount:  $ 4975.00
+
+Ediosn Township
+Federal Id # 22-6002241 Amount: $ 4025.00
+
+# Rxjs Creation Operators
+
+const observable = ajax(`https://api.github.com/meta`).pipe(
+  map(response => {
+    console.log(response);
+    return response;
+  }),
+  catchError(error => {
+    console.log(error);
+    return of(error);
+  })
+);observable.subscribe(res => console.log(res));
+
+1. We pipe the data from the response with the map operator. Also, we can catch HTTP errors with the catchError operator.
+2. we return the response in the callback of the map that we passed into the map operator.
+
+
+-------------
+
+<fieldset>
+        <legend>Personalia:</legend>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <app-items fxFlex="50%"></app-items>
+            <app-personal-details fxFlex="50%"></app-personal-details>
+        </div>
+    </fieldset>
+
+    <div class="container"
+         fxLayout
+         fxLayout.xs="column"
+         fxLayoutAlign="center"
+         fxLayoutGap="10px"
+         fxLayoutGap.xs="0">
+        <div class="item item-1" fxFlex="15%">Item 1</div>
+        <div class="item item-2" fxFlex="20%" fxFlexOrder="3">Item 2</div>
+        <div class="item item-3" fxFlex>Item 3</div>
+    </div>
+------Q-----------
+# Should you use template reference or ng-content? ?
+
+# Child to Parent: Sharing Data via ViewChild ?
+https://fireship.io/lessons/sharing-data-between-angular-components-four-methods/
+
+ViewChild allows a one component to be injected into another, giving the parent access to its attributes and functions. One caveat, however, is that child won’t be available until after the view has been initialized. This means we need to implement the AfterViewInit lifecycle hook to receive the data from the child.
+
+# Child to Parent: Sharing Data via Output() and EventEmitter?
+
+Another way to share data is to emit data from the child, which can be listed to by the parent. This approach
+
+# ngOnInit() vs   ngAfterViewInit() ?
+----------
+
+https://github.com/chkramesh/java-bn-project1/blob/master/bn/gr/awr-ng-grprice/src/lib/grprice-selection-options/grprice-selection-options.component.html
+https://github.com/chkramesh/java-bn-project1/blob/master/bn/gr/awr-ng-grprice/src/lib/grprice-selection-options/grprice-selection-options.component.ts
+https://github.com/chkramesh/java-bn-project1/blob/master/bn/gr/awr-ng-grprice/src/lib/grprice-grid-api/grprice-grid-api.component.html
+https://github.com/chkramesh/java-bn-project1/blob/master/bn/gr/awr-ng-grprice/src/lib/grprice-grid-api/grprice-grid-api.component.ts
+
+72 Calvert Ave W, Edison, NJ 08820
+4 Lipnick Ln, Edison, NJ 08820
+1 Bennington Dr, Edison, NJ 08820
+

@@ -1,0 +1,599 @@
+Shah, Sanket <Sanket.Shah1@bnymellon.com> 
+https://mysource2.bnymellon.net/pages/hr/career/ 
+
+// ------------------Ramesh Stackblitz --
+// https://www.concretepage.com/angular-2/angular-2-formcontrol-example
+
+// https://stackblitz.com/edit/angular-fkn3z8?file=src%2Fapp%2Fapp.component.ts
+
+// with tabs - no code
+// https://stackblitz.com/@chkramesh
+
+// with tabs- working on
+// https://stackblitz.com/edit/angular-material-table-with-multi-queries-nco2rz
+
+// with tabs - Reacitve form code
+// https://stackblitz.com/edit/angular-material-tab-example-bbzfbz
+
+// Reacitve form code
+// https://stackblitz.com/edit/angular-rjkbpo
+// https://stackblitz.com/edit/angular-form-disabled-pgw1ky
+
+
+// lot of Reacitve form code - *****
+// https://stackblitz.com/edit/angular-85xtbj
+
+// Reacitve form code - for posting issues
+// https://stackblitz.com/edit/example-angular-material-reactive-form-v4ioft
+// https://stackblitz.com/edit/example-angular-material-reactive-form-sm4qch
+// https://stackblitz.com/edit/angular-material-form-jr3saw
+// https://stackblitz.com/edit/angular-mat-formfield-flex-layout-rjewhy
+
+// gloabal error handling - have to fix
+// https://stackblitz.com/edit/angular-6-httpclient-global-error-handling-bezgtx
+// global-error-catching-angular-emv7pj
+// global-error-catching-angular-zzm2qa
+
+// good- use for experiment
+// github-uh3oom
+// github-unklbx
+
+// Working Code
+// angular-fkn3z8
+
+
+// -- Delete ?
+// https://stackblitz.com/edit/angular-os6b3c
+// https://stackblitz.com/edit/angular-eyyciy
+// https://stackblitz.com/edit/angular-reactive-form-sobsoft-fesafd
+// https://stackblitz.com/edit/angular-mat-formfield-flex-layout-f1y5av
+// https://stackblitz.com/edit/angular-mat-formfield-flex-layout-887at5
+// https://stackblitz.com/edit/angular-mat-formfield-flex-layout-stejxb
+// angular-hqphcq
+// https://stackblitz.com/edit/angular-s8v7re
+// https://stackblitz.com/edit/angular-mldo1i
+// https://stackblitz.com/edit/angular-x4vwqg
+
+
+// https://stackoverflow.com/questions/46769042/subscribe-to-observable-is-returning-undefined
+// https://codecraft.tv/courses/angular/http/http-with-observables/
+// https://appdividend.com/2018/12/08/angular-7-observables-tutorial-with-example/
+
+// import { PortalConstants } from '../../../utils/portal.constants';
+
+// settings_security(): void {
+//         let SETTINGS_PAGE = PortalConstants.SETTINGS_NAVIGATION_OBJECT;
+//         let SECURITY_PAGE = PortalConstants.SETTINGS_SECURITY_NAVIGATION_OBJECT;
+//         let navigation = new NxpNavigation();
+//         navigation.parentPage = SETTINGS_PAGE;
+//         navigation.childPage = SECURITY_PAGE;
+//         this.navigationService.handleNavigation(navigation);
+//     }
+
+// src/utils/portal.constants.ts
+//export class PortalConstants {
+
+
+
+// https://forum.ionicframework.com/t/get-subscribe-data-out-of-function/76612/2
+// https://angular.io/guide/http
+
+// # RxJS
+// 1) Pipes in Angular: A pipe takes in data as input and transforms it to the desired output
+// https://angular.io/guide/pipes
+
+// 2) pipe() function in RxJS: You can use pipes to link operators together. Pipes let you combine multiple functions into a single function.
+
+// RxJS Operators are functions that build on the observables foundation to enable sophisticated manipulation of collections.
+
+// For example, RxJS defines operators such as map(), filter(), concat(), and flatMap().
+// You can use pipes to link operators together. Pipes let you combine multiple functions into a single function.
+
+// https://stackoverflow.com/questions/52934247/angular-observer-catch-error-on-component
+// https://www.c-sharpcorner.com/article/handling-errors-in-angular/
+// https://stackblitz.com/edit/global-error-catching-angular?file=app%2Fapp.module.ts
+// https://stackblitz.com/github/melcor76/global-error-handling?file=src%2Fapp%2Fapp.module.ts
+
+// good- use for experiment
+// github-uh3oom
+// github-unklbx
+
+// Working Code
+// angular-fkn3z8
+
+
+  //     </div>      
+  //     <div *ngIf="startDateDivShow" class="form">
+  //         <mat-form-field>
+  //             <!-- <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="startDate" [(ngModel)]="data.startDate"> -->
+  //             <!-- <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="startDate" [value]="data.startDate" [(ngModel)]="data.startDate"> -->
+  //           <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="startDate">
+  //           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  //           <mat-datepicker #picker></mat-datepicker>
+  //         </mat-form-field>          
+  //         <mat-error *ngIf="editManagerForm.hasError('startDateNull')">
+	// 				  <i class="fa fa-times-circle"></i> Please enter a valid start date.
+  //         </mat-error>
+  //         <mat-error *ngIf="editManagerForm.hasError('startDateGTendDate')">
+  //           <i class="fa fa-times-circle"></i> Start Date should be before termination date.
+  //         </mat-error>
+  //         <mat-error *ngIf="editManagerForm.hasError('startDateGTcurrentDate')">
+  //           <i class="fa fa-times-circle"></i> Start Date should be before current date.
+  //         </mat-error>
+  //     </div>
+  //     <div class="t11pxB">End Date</div>
+  //     <div class="form">          
+  //             <!-- <mat-form-field floatLabel="never" >                
+  //               <!-- <mat-select (selectionChange)="endDatePick($event)" name="assignMgrEndDateList" [(ngModel)]="data.assignMgrEndDateList"> --
+  //               <mat-select (selectionChange)="endDatePick($event)" formControlName="assignMgrEndDateList" [(ngModel)]="data.assignMgrEndDateList">
+  //                 <mat-option value="asOfDate">As of Date</mat-option>
+  //                 <mat-option value="current">Current</mat-option>
+  //               </mat-select>
+  //             </mat-form-field> -->
+              
+  //             <mat-form-field floatLabel="never" >                
+  //               <!-- <mat-select (selectionChange)="endDatePick($event)" name="assignMgrEndDateList" [(ngModel)]="data.assignMgrEndDateList"> -->
+  //               <mat-select (selectionChange)="endDatePick($event)" formControlName="assignMgrEndDateList" [(ngModel)]="data.assignMgrEndDateList">
+  //                 <mat-option *ngFor = "let type of assignMgrEndDateListOption" [value] = "type.code"> {{type.description}}</mat-option>
+  //               </mat-select>
+  //             </mat-form-field>
+  //       </div>      
+  //       <div *ngIf="endDateDivShow" class="never">
+  //           <mat-form-field>
+  //             <!-- <input matInput [matDatepicker]="picker1" placeholder="Choose a date" formControlName="endDate" [value]="data.endDate" [(ngModel)]="data.endDate"> -->
+  //             <input matInput [matDatepicker]="picker1" placeholder="Choose a date" formControlName="endDate">
+  //             <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+  //             <mat-datepicker #picker1></mat-datepicker>
+  //           </mat-form-field>
+  //           <mat-error *ngIf="editManagerForm.hasError('endDateNull')">
+  //             <i class="fa fa-times-circle"></i> Please enter a valid end date.
+  //           </mat-error>
+  //           <mat-error *ngIf="editManagerForm.hasError('endDateGTcurrentDate')">
+  //             <i class="fa fa-times-circle"></i> Termination Date should be on or before current date.
+  //           </mat-error>
+  //       </div>
+  //     <div mat-dialog-actions>
+  //       <!-- <button mat-button [type]="submit" [disabled]="!formControl.valid" [mat-dialog-close]="1" (click)="editManager()">Save</button>-->        
+  //       <button mat-button class="btn" type="submit">Submit</button>&nbsp;
+  //       <!-- <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button> -->
+  //       <a mat-button class="btn neg" (click)="onNoClick()" tabindex="-1">Cancel</a>
+  //     </div>
+  //   </form>
+  // </div>
+
+  //////////////////////
+
+
+//   import { Component, Inject } from '@angular/core';
+// import { NgForm } from '@angular/forms';
+// import { ReactiveFormsModule, FormBuilder, FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
+// import { formatDate } from '@angular/common';
+// import { MatSelectModule, MatInputModule, MatButtonModule, MatDatepickerModule } from '@angular/material';
+// import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+// import { fromPromise } from 'rxjs/internal/observable/fromPromise';
+// import { ManagerhistoryService } from '../../services/managerhistory.service';
+// import { DataService } from '../../services/data.service';
+// @Component({
+//   selector: 'app-edit-manager-dialog',
+//   templateUrl: './edit-manager-dialog.component.html',
+//   styleUrls: ['./edit-manager-dialog.component.css']
+// })
+// export class EditManagerDialogComponent {
+//  startDateDivShow: boolean;
+//  endDateDivShow: boolean;
+//  editManagerForm;
+//  scrDefConst: String;
+//  command: String;
+//  formatType: String;
+//  managerName: any;
+//  managerProduct: any;
+//  managerId: any;
+//  productId: any;
+//  assignMgrStartDateList: any;
+//  startDate: any;
+//  assignMgrEndDateList: any;
+//  endDate: any;
+//  submitted = false;
+//  currentDate: Date;
+//  startDateMessage;
+//  endDateMessage;
+//  assignMgrEndDateListOption: boolean;
+//  message;
+//  constructor (
+//   public dialogRef: MatDialogRef<EditManagerDialogComponent>,
+//   @Inject(MAT_DIALOG_DATA) public data: any,
+//   private appService: ManagerhistoryService,
+//   private dataServices: DataService,
+//   private formBuilder: FormBuilder) {
+//    this.currentDate = new Date();
+//    this.dataServices.retainCurrentData.subscribe((message: any) => {
+//     console.log('RETAINVALUES-IN-COMPONENT', message);
+//     console.log(message);
+//    });
+//    // this.message = '';
+//    if ( this.message === 1) {
+//     const item: any[] = [{
+//      'endDateList' : [
+//       { code: 'asOfDate', description: 'As Of Date' },
+//       { code: 'allHistory', description: 'Current' }
+//      ]
+//     }];
+//     this.assignMgrEndDateListOption = item[0].endDateList;
+//    } else {
+//     // this.assignMgrEndDateListOption = true;
+//     const item: any[] = [{
+//      'endDateList': [ { code: 'asOfDate', description: 'As Of Date' } ]
+//     }];
+//     this.assignMgrEndDateListOption = item[0].endDateList;
+//    }
+//    console.log('assignMgrEndDateListOption');
+//    console.log(this.assignMgrEndDateListOption);
+//    if (data.startDate) {
+//     this.startDateDivShow = true;
+//     data.assignMgrStartDateList = 'asOfDate';
+//     // this.startDate = this.dateFormat(data.startDate);
+//     // this.startDate = data.startDate;
+//     // this.startDate = formatDate(data.startDate, 'MM/dd/yyyy', 'en-US');
+//    }
+//    if (data.endDate) {
+//     this.endDateDivShow = true;
+//     data.assignMgrEndDateList = 'asOfDate';
+//     // this.assignMgrEndDateListOption = false;
+//     // this.endDate = data.endDate;
+//     // this.endDate = formatDate(data.endDate, 'MM/dd/yyyy', 'en-US');
+//    }
+//    /* this.mgrName = data.mgrName;
+//    this.mgrProduct = data.mgrProduct;
+//    this.managerId = data.managerId;
+//    this.productId = data.productId; */
+//    this.editManagerForm = this.formBuilder.group({
+//     managerId: [''],
+//     productId: [''],
+//     managerName: [''],
+//     managerProduct: [''],
+//     assignMgrStartDateList: [''],
+//     startDate: [new Date(data.startDate)],
+//     assignMgrEndDateList: [''],
+//     endDate: [new Date(data.endDate)],
+//     currentDate: ['']
+//    }, { validator: this.checkDates });
+
+//    this.editManagerForm.patchValue({
+//     // assignMgrStartDateList: 'asOfDate',
+//     managerName: data.managerName,
+//     managerProduct: data.managerProduct,
+//     productId: data.managerId,
+//     managerId: data.managerId,
+//     assignMgrStartDateList: data.assignMgrStartDateList,
+//     // startDate: new Date(data.startDate),
+//     assignMgrEndDateList: data.assignMgrEndDateList,
+//     // endDate: new Date(data.endDate),
+//     // currentDate: this.currentDate
+//     currentDate: formatDate(this.currentDate, 'MM/dd/yyyy', 'en-US')
+//    });
+//   }
+//  /* formControl = new FormControl('', [
+//   Validators.required
+//   // Validators.email,
+//  ]); */
+//  /* dateFormat(value: any): Date | null {
+//   console.log('dateFormat');
+//   console.log(value)
+//   if ((typeof value === 'string') && (value.indexOf('-') > -1)) {
+//     const str = value.split('-');
+//     const year = Number(str[2]);
+//     const month = Number(str[1]) - 1;
+//     const date = Number(str[0]);
+//     return new Date(year, month, date);
+//   }
+//   const timestamp = typeof value === 'number' ? value : Date.parse(value);
+//   return isNaN(timestamp) ? null : new Date(timestamp);
+//  } */
+//  getErrorMessage() {
+//   // return this.formControl.hasError('required') ? 'Required field' :
+//   // this.formControl.hasError('email') ? 'Not a valid email' :'';
+//  }
+//  submit() {
+//   // emppty stuff
+//  }
+//  onNoClick(): void {
+//   this.dialogRef.close();
+//  }
+//  checkDates(group: FormGroup) {
+//   console.log('checkDates');
+//   console.log(group);
+//   if ((group.controls.startDate.value === undefined || group.controls.startDate.value === null) && group.controls.assignMgrStartDateList.value === 'asOfDate') {
+//    return { startDateNull : true };
+//   }
+//   if ((group.controls.endDate.value === undefined || group.controls.endDate.value === null) && group.controls.assignMgrEndDateList.value === 'asOfDate') {
+//    return { endDateNull : true };
+//   }
+//   if (group.controls.endDate.value < group.controls.startDate.value) {
+//    return { startDateGTendDate : true };
+//   }
+//   if (group.controls.currentDate.value < group.controls.startDate.value) {
+//    return { startDateGTcurrentDate : true };
+//   }
+//   if (group.controls.currentDate.value < group.controls.endDate.value) {
+//    return { endDateGTcurrentDate : true };
+//   }
+//   return null;
+//  }
+//  editManager(form) {
+//   console.log ('in Component - addManager');
+//   console.log (form.value);
+//   console.log('Date Validation');
+//   console.log(this.editManagerForm.hasError('startDateGTendDate'));
+//   this.submitted = true;
+//   this.scrDefConst = 'managerEdit';
+//   this.command = 'managerEdit';
+//   this.formatType = 'html';
+//   this.managerName = form.value.managerName;
+//   this.managerProduct = form.value.managerProduct;
+//   this.managerId = form.value.managerId;
+//   this.productId = form.value.productId;
+//   // this.startDate = form.value.startDate;
+//   // this.startDate = this.dateFormat(form.value.startDate);
+//   this.assignMgrStartDateList = form.value.assignMgrStartDateList;
+//   this.assignMgrEndDateList = form.value.assignMgrEndDateList;
+//   console.log('assignMgrStartDateList');
+//   console.log(this.assignMgrStartDateList);
+//   console.log('assignMgrEndDateList');
+//   console.log(this.assignMgrEndDateList);
+//   if (this.assignMgrStartDateList === 'allHistory') {
+//    this.startDate = '';
+//   } else {
+//    this.startDate = formatDate(form.value.startDate, 'MM/dd/yyyy', 'en-US');
+//   }
+//   if (this.assignMgrStartDateList === 'current') {
+//    this.endDate = '';
+//   } else {
+//    this.endDate = formatDate(form.value.endDate, 'MM/dd/yyyy', 'en-US');
+//   }
+//   console.log('STARTDATE');
+//   console.log(this.startDate);
+//   console.log('ENDDATE');
+//   console.log(this.endDate);
+//   let advEditFormMapData =  new Map();
+//   advEditFormMapData.set('scrDefConst', this.scrDefConst);
+//   advEditFormMapData.set('command', this.command);
+//   advEditFormMapData.set('formatType', this.formatType);
+//   advEditFormMapData.set('mgrName', this.managerName);
+
+
+// https://stackblitz.com/github/riyadali/townofbabylon/?file=src%2Fapp%2Fin-memory-data.service.ts
+
+// ******* How to use Gloabl *******
+// https://stackblitz.com/edit/angular-x32any
+// https://stackoverflow.com/questions/34986922/define-global-constants-in-angular-2
+
+// ******** taking different file for DEV / INT and PROD*********
+
+// https://blog.usejournal.com/how-to-map-rest-api-data-using-decorator-pattern-in-angular-6-94eb49ba16b1
+
+// Angular HttpClient modify response in service
+// https://stackoverflow.com/questions/47617169/angular-httpclient-modify-response-in-service
+
+// MAT autocomplete ********************
+// https://stackblitz.com/github/bithost-gmbh/ngx-mat-select-search-example
+// https://stackblitz.com/edit/autocomplete-force-selection-tests-w2fqww?file=app%2Fapp.component.html
+// https://stackblitz.com/edit/angular-material-autocomplete-async2?file=src%2Fapp%2Fin-memory-data.service.ts
+// https://stackblitz.com/edit/angular-material2-issue-wmgcaj
+// How to use the force-item-list on the mat-autocomplete
+
+// https://stackoverflow.com/questions/40171914/what-is-the-difference-between-formcontrolname-and-formcontrol
+
+// advisorId: any | undefined;
+// const data = fromPromise(advCancelPromiseRsp );
+
+// export class BalancesLabels {
+//     // Balance Field Labels
+//     static TOTAL_BALANCE: string = 'NXP_BALANCES.SUMMARY.TOTAL_BALANCE';
+//     static TOTAL_ACCOUNT_WORTH: string = 'NXP_BALANCES.SUMMARY.TOTAL_ACCOUNT_WORTH';
+//     static TOTAL_ACCOUNTS_WORTH: string = 'NXP_BALANCES.SUMMARY.TOTAL_ACCOUNTS_WORTH
+// }
+
+// export class RoleLookupUtils {
+//     static ROLE_NAMES: string[] = ['System Feature', 'FI Role',
+//       'AWR Login Role', 'MGT Role', 'Compliance Role', 'ASST Role', 'Display All'];
+// }
+
+
+
+// https://codehandbook.org/how-to-implement-auto-complete-in-angular-4/
+
+// https://stackoverflow.com/questions/46268259/clear-angular-material-autocomplete-after-selection
+// https://code-maze.com/angular-material-form-validation/
+
+// Ramesh StackBlitz
+https://stackblitz.com/edit/angular-material-table-with-multi-queries-nco2rz
+https://stackblitz.com/edit/angular-fkn3z8
+
+Flex Layout
+https://stackblitz.com/edit/stackoverflowcom-questions-41665737-angular-2-flex-layout-hei?file=src/app/app.component.html
+
+Nested
+https://stackblitz.com/edit/angular-nested-forms-cva
+
+ ************ Custome Validations *******************
+ https://medium.com/@zeljkoradic/custom-form-validators-in-angular-6-using-regular-expressions-d421a5655adf
+ *************
+ https://stackoverflow.com/questions/46667375/angular-form-validations-values-have-to-be-different-to-initial-values
+ https://stackblitz.com/edit/angular-rc452r
+ https://medium.com/@realTomaszKula/angular-cross-field-validation-d94e0d063b61
+ https://stackblitz.com/edit/ng-cross-validation
+ https://www.infragistics.com/community/blogs/b/infragistics/posts/how-to-do-conditional-validation-on-valuechanges-method-in-angular-reactive-forms-
+ 
+ https://medium.com/free-code-camp/validating-reactive-forms-with-default-and-custom-form-field-validators-in-angular-5586dc51c4ae
+ https://stackblitz.com/edit/angular-validation-summary
+ With getter
+ https://malcoded.com/posts/angular-reactive-form-validation/
+ 
+ **** with model ************
+ https://stackblitz.com/edit/angular-validation-summary
+ 
+ Invalid credentials or Token might have been expired! So please login again
+ 
+ ---------------  Oct/2019 ------------------------------------------
+ 
+ # BehaviorSubject
+ 
+ https://github.com/ReactiveX/rxjs/issues/4692
+ https://pillar-soft.com/2018/07/02/behavior-subjects-in-angular-6/
+ https://hassantariqblog.wordpress.com/2016/12/03/angular2-using-loaderspinner-as-angular-service-in-angular-2-application/
+ https://hassantariqblog.wordpress.com/2017/03/22/angular2-using-custom-loader-spinner-as-service-in-angular-2-application/
+ https://stackblitz.com/edit/angular-yadden
+ 
+ # The BehaviorSubject
+Using the BehaviorSubject allows you to share states between different areas of the application in a quick way but could also easily get
+messy (hard to maintain) and not always needed when managing a shareable state of the app in a redux pattern using rxjs store
+
+# I would only expose the BehaviorSubject as an observable. The only place to emit new values would be within the same service so there is only ONE place to emit new data.
+
+private _isUserAuthenticated = new BehaviorSubject<boolean>(false);
+isUserAuthenticated$ = this._isUserAuthenticated.asObservable();
+  setIsUserAuthenticated(isAuthenticated: boolean) { 
+  this._isUserAuthenticated.next(isAuthenticated);
+}
+
+************ Spinner with resuable component  *******
+https://www.freecodecamp.org/news/how-to-create-reusable-loading-indicator-for-angular-projects-d0a11f4631e0/
+https://www.npmjs.com/package/@btapai/ng-loading-indicator
+
+
+{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2ZW5rYXQiLCJzY29wZXMiOiJST0xFX0FETUlOIiwiaWF0IjoxNTcwMjE0MjM4LCJleHAiOjE1NzAyMTc4Mzh9.mvaSs2DnUfHmaMWN2EF_5heo_LMk7XUFZ3QHVEZCq_8"}}}
+
+# What is difference between subject and BehaviorSubject?
+A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. A Subject doesn't hold a value
+
+# BehaviorSubject?
+
+BehaviorSubject vs Observable : RxJS has observers and observables, Rxjs offers a multiple classes to use with data streams, and one of them is a BehaviorSubject.
+
+Observables : Observables are lazy collections of multiple values over time.
+
+BehaviorSubject:A Subject that requires an initial value and emits its current value to new subscribers.
+
+app.component.ts
+
+behaviourService.setName("behaviour");
+
+behaviour.service.ts
+
+private name = new BehaviorSubject("");
+getName = this.name.asObservable();`
+
+constructor() {}
+
+setName(data) {
+  this.name.next(data);
+}
+custom.component.ts
+
+behaviourService.subscribe(response=>{
+  console.log(response);    //output: behaviour
+});
+
+# When to use Subject & BehaviorSubject?
+
+https://shrestharohit.com.np/subject-behavioursubject-rxjs-angular/
+
+We now clearly know the difference between Subject and BehaviorSubject. Subject on subscription doesn't provide any initial value while
+BehaviorSubject provides value on subscription. So, in the situation where you are confident that the initial value will be is
+something we use BehaviorSubject.
+
+For example, let's take an example of a showing image on a user's profile. Upon unavailability of the image from the user, we need to show
+a default placeholder image. So, in such a case, we know a default value for the image is always a placeholder image. So, we use BehaviorSubject instead of Subject.
+In case, where no image must be shown if the user doesn't upload any photo, Subject must be used.
+
+****************** # Angular  State Management in Angular2+ ? ****
+
+https://www.tsmean.com/articles/angular/state-management/
+https://github.com/tsmean/animal-angular
+
+
+ 
+
+
+# javascript array of objects vs array of values?
+# Angular HttpClient Response? returns an Observable
+
+1. HttpClient returns an Observable with the Response object, versus
+in AngularJs,  $http which returns Promises.
+
+2. The major difference between Promises and Observables is that Observables may emit data more than once, which is why they can be subscribed to and unsubscribed from.
+3. The other major difference between $http and HttpClient is that HttpClient doesn't actually make the request to the server until there is a subscription to the observable.
+
+
+
+#  How to optimize Angular app?
+1. Consider lazy loading instead of fully bundled app if the app size is more.
+2. Make sure that any 3rd party library, which is not used, is removed from the application.
+3. Have all dependencies and dev-dependencies are clearly separated.
+4. Make sure the application doesn’t have un-necessary import statements.
+5. Make sure the application is bundled, uglified, and tree shaking is done.
+6. Consider AOT compilation.
+
+
+# What are the ways to control AOT compilation?
+You can control your app compilation in two ways
+
+1. By providing template compiler options in the tsconfig.json file
+2. By configuring Angular metadata with decorators
+
+# Angular CLI
+Angular provides support for command-line interface tools. These tools can be used for adding components, testing, instant deploying, etc.
+
+# What is AOT (Ahead-Of-Time) Compilation?
+Answer: Each Angular app gets compiled internally. The Angular compiler takes in the JS code, compiles it and then produces some JS code. This happens only once per occasion per user. It is known as AOT (Ahead-Of-Time) compilation.
+
+# http vs Https rest services
+HTTP is unsecured while HTTPS is secured. HTTP sends data over port 80 while HTTPS uses port 443.
+HTTP operates at application layer, while HTTPS operates at transport layer. No SSL certificates are required for HTTP,
+with HTTPS it is required that you have an SSL certificate and it is signed by a CA
+	
+
+
+https://medium.com/@LuisEspino/quick-answers-to-angular-interview-questions-abc95da66e2c
+
+4. Angular Errors
+
+1. @ViewChild or @ViewChildren
+2. ElementRef<T>
+3. Observable operations
+
+5. component communicatios.
+# ng-content  vs view-template? 
+# Subject vs b subject? 
+# Form validations?
+
+6. Java Junit and Mocito
+7. Dockers'
+8. Sql joins
+
+Backup
+pom.cml
+
+Wsdmin JavaCode
+WsAdmin AngularCOde
+Awr Angular Code
+				 
+				 
+Albridge Wealth reporting, is welath reporting tool to manage ROL (Rate of return) calculation.
+1. Account Performance
+2. Portfolio performnace
+3. Individual Account
+
+Partner List
+
+hong.huang@wellsfargo.com
+
+
+A components ngOnDestroy method is called just before Angular destroys the component.
+A component defines its input parameters with the @Input decorator.
+When a component depends on a service, the injector can be used to configure  dependency injection.
+
+
+
+
+				 
